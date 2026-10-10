@@ -261,6 +261,11 @@ export const en = {
     sending: "Preparing payment…",
     methods: "Cards and wallets accepted are shown on the payment page.",
     notEnabled: "Online payment is not switched on yet. Please contact us to arrange payment.",
+    offlineTitle: "Card payment is being set up",
+    offlineBody: "Online card payment is not available yet. To pay a quote deposit or an invoice now, message us with your reference and we will send you the bank transfer details.",
+    offlineWhatsapp: "Arrange payment on WhatsApp",
+    offlineEmail: "Arrange payment by email",
+    offlineSubject: "Payment for quote / invoice",
     error: "We could not start the payment. Nothing has been charged. Please try again or contact us.",
     errors: {
       reference: "Enter the reference from your quote or invoice (3–40 letters, numbers or dashes).",

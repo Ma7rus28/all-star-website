@@ -1,11 +1,13 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { ShieldCheck } from "lucide-react"
+import { Clock, ShieldCheck } from "lucide-react"
 import { getDict } from "@/content"
 import { PayForm } from "@/components/site/pay-form"
 import { PageHead } from "@/components/site/sections"
 import { hasLocale } from "@/lib/i18n"
+import { moyasarEnabled } from "@/lib/moyasar"
 import { pageMeta } from "@/lib/seo"
+import { isSet, site, waHref } from "@/lib/site"
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/pay">): Promise<Metadata> {
   const { lang } = await params
@@ -18,6 +20,41 @@ export default async function Pay({ params }: PageProps<"/[lang]/pay">) {
   const { lang } = await params
   if (!hasLocale(lang)) notFound()
   const t = getDict(lang).pay
+
+  // Without a Moyasar key the form could only fail, so offer a direct way to pay instead.
+  // The key is read at build time: redeploy after adding or changing it.
+  if (!moyasarEnabled()) {
+    const subject = encodeURIComponent(t.offlineSubject)
+    return (
+      <>
+        <PageHead title={t.title} sub={t.sub} />
+        <div className="wrap py-16 md:py-24">
+          <div className="max-w-2xl rounded-3xl border border-gold/40 bg-gold/8 p-6 md:p-10">
+            <Clock aria-hidden="true" className="size-8 text-gold" />
+            <h2 className="mt-5 text-2xl font-extrabold md:text-3xl">{t.offlineTitle}</h2>
+            <p className="mt-4 text-lg text-muted-foreground">{t.offlineBody}</p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              {isSet(site.whatsapp) && (
+                <a
+                  href={`${waHref(site.whatsapp)}?text=${subject}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-gold"
+                >
+                  {t.offlineWhatsapp}
+                </a>
+              )}
+              {isSet(site.email) && (
+                <a href={`mailto:${site.email}?subject=${subject}`} className="btn btn-line">
+                  {t.offlineEmail}
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      </>
+    )
+  }
 
   return (
     <>
