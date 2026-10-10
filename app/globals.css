@@ -1,0 +1,272 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-display);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-deep: var(--gold-deep);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: dark;
+  --font-body: var(--font-en-body);
+  --font-display: var(--font-en-display);
+  --ink: #050505;
+  --paper: #f3efe6;
+  --gold: #d4af37;
+  --gold-light: #f3dc9a;
+  --gold-deep: #9a7524;
+  --gold-grad: linear-gradient(135deg, #f6e6b0 0%, #d4af37 42%, #a47c22 100%);
+  --background: #050505;
+  --foreground: #f3efe6;
+  --card: #0d0c0a;
+  --card-foreground: #f3efe6;
+  --popover: #0d0c0a;
+  --popover-foreground: #f3efe6;
+  --primary: #d4af37;
+  --primary-foreground: #0a0803;
+  --secondary: #17150f;
+  --secondary-foreground: #f3efe6;
+  --muted: #17150f;
+  --muted-foreground: #b5ae9d;
+  --accent: #17150f;
+  --accent-foreground: #f3efe6;
+  --destructive: #ff7a7a;
+  --border: rgb(212 175 55 / 20%);
+  --input: rgb(243 239 230 / 30%);
+  --ring: #d4af37;
+  --radius: 0.75rem;
+}
+
+html[lang="ar"] {
+  --font-body: var(--font-ar-body);
+  --font-display: var(--font-ar-display);
+}
+
+/* Alternate band: a slightly lifted black so long pages keep some rhythm. */
+.paper {
+  --background: #0b0a08;
+  --card: #131109;
+  --muted: #1d1a11;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-x: clip;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), system-ui, sans-serif;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  html[lang="ar"] :is(h1, h2, h3, h4) {
+    line-height: 1.35;
+    letter-spacing: 0;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .wrap { padding-inline: 2.5rem; }
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  html[lang="ar"] .eyebrow { letter-spacing: 0; font-size: 0.9375rem; }
+  .eyebrow::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: currentColor;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn:active { transform: scale(0.98); }
+  .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .btn-gold { background: var(--gold-grad); color: #0a0803; }
+  .btn-gold:hover { filter: brightness(1.1); box-shadow: 0 0 0 6px rgb(212 175 55 / 18%), 0 8px 30px rgb(212 175 55 / 25%); }
+  .btn-line { border-color: currentColor; color: var(--foreground); background: transparent; }
+  .btn-line:hover { background: var(--foreground); color: var(--background); border-color: var(--foreground); }
+  .gold-fill { background: var(--gold-grad); color: #0a0803; }
+  .gold-text {
+    background: var(--gold-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .field { min-height: 3rem; font-size: 1rem; }
+
+  /* Halftone "LED wall" texture: soft gold light seen through a black dot screen. */
+  .halftone {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: var(--ink);
+  }
+  .halftone::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at center, transparent 1.25px, var(--ink) 1.9px);
+    background-size: 8px 8px;
+  }
+  .halftone-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    background: radial-gradient(closest-side, #fff8e1 0%, #f3dc9a 22%, #d4af37 48%, rgb(154 117 36 / 55%) 70%, transparent 100%);
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+  .halftone-fade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgb(5 5 5 / 35%), transparent 30%, transparent 60%, var(--ink) 100%);
+  }
+  /* Quiet version of the same dot screen for page headers and bands. */
+  .dots {
+    background-image: radial-gradient(circle at center, rgb(212 175 55 / 22%) 1px, transparent 1.6px);
+    background-size: 10px 10px;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--d, 0ms);
+  }
+  .reveal.is-in { opacity: 1; transform: none; }
+
+  .marquee { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+  [dir="rtl"] .marquee { animation-name: marquee-rtl; }
+  .marquee-host:hover .marquee, .marquee-host:focus-within .marquee { animation-play-state: paused; }
+
+  .prose-legal h2 { font-size: 1.375rem; margin-top: 2.5rem; margin-bottom: 0.75rem; }
+  .prose-legal p, .prose-legal li { color: var(--muted-foreground); max-width: 68ch; }
+  .prose-legal p + p { margin-top: 0.75rem; }
+  .prose-legal ul { list-style: disc; padding-inline-start: 1.25rem; margin-top: 0.5rem; display: grid; gap: 0.4rem; }
+  .prose-legal a { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+}
+
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes marquee-rtl { to { transform: translateX(50%); } }
+@keyframes word-in {
+  from { opacity: 0; transform: translateY(0.4em); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes sweep {
+  0%, 100% { transform: rotate(-9deg); }
+  50% { transform: rotate(9deg); }
+}
+@keyframes drift {
+  from { transform: translate3d(-6%, -4%, 0) scale(1); }
+  to { transform: translate3d(8%, 6%, 0) scale(1.15); }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .marquee { animation: none; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

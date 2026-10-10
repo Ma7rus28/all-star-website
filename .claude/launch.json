@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "all-star-website",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "export PATH=\"$HOME/.local/node/bin:$PATH\"; cd /Users/macbookpro/HR/website && npm run dev -- --port 3210"],
+      "port": 3210
+    }
+  ]
+}
