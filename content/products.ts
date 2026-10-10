@@ -22,7 +22,7 @@ export type ProductCopy = {
 
 export type Product = {
   slug: string
-  cat: "print" | "signage" | "display" | "outdoor" | "gifts"
+  cat: "custom" | "print" | "signage" | "display" | "outdoor" | "gifts"
   photo: { src: string; zoom?: boolean }
   en: ProductCopy
   ar: ProductCopy
@@ -429,6 +429,81 @@ export const products: Product[] = [
       intro: "شرائط البطاقات والبطاقات التعريفية تعرّف بفريقك، والهدية الجيدة تجذب الزوار إلى جناحك. نطبعها بهويتك ونسلّمها مجهّزة ومعدودة قبل الفعالية.",
       features: ["شرائط بطاقات مطبوعة مع خيارات المشابك", "بطاقات تعريفية وحواملها وأساور", "حقائب قماشية وتيشيرتات وكابات وزيّ موحّد", "أقلام ودفاتر وهدايا دعائية صغيرة"],
       uses: ["بطاقات موظفي وزوار المعارض", "حقائب المشاركين في المؤتمرات", "هدايا الحملات الميدانية", "زيّ الفرق وأطقم المتطوعين"],
+    },
+  },
+  {
+    slug: "custom-t-shirt-printing",
+    cat: "custom",
+    photo: img("custom-tshirts.webp"),
+    en: {
+      name: "Custom T-shirt printing",
+      card: "T-shirts, long sleeves and crop tops printed with your design, from one piece to bulk orders.",
+      title: "Custom T-Shirt Printing in Riyadh, Saudi Arabia",
+      description: "Custom T-shirt printing in Riyadh: short-sleeve, long-sleeve and crop T-shirts printed with your logo or design for teams, events, uniforms and brands across Saudi Arabia.",
+      h1: "Custom T-shirt printing in Riyadh",
+      intro: "Send us your logo or artwork and we print it on the T-shirts you choose, front, back or on the chest. We handle single samples as well as bulk orders for teams, events and campaigns.",
+      features: ["Short-sleeve, long-sleeve and cropped T-shirts", "DTF, screen and vinyl printing, plus embroidery", "Front, back, chest and sleeve print positions", "A range of colours and sizes for men, women and children"],
+      uses: ["Company and team uniforms", "Event, volunteer and staff T-shirts", "National Day and campaign shirts", "Brand merchandise and giveaways"],
+    },
+    ar: {
+      name: "طباعة تيشيرتات حسب الطلب",
+      card: "تيشيرتات بأكمام قصيرة وطويلة وكروب توب مطبوعة بتصميمك، من قطعة واحدة إلى طلبات الجملة.",
+      title: "طباعة تيشيرتات حسب الطلب في الرياض | السعودية",
+      description: "طباعة تيشيرتات حسب الطلب في الرياض: تيشيرتات بأكمام قصيرة وطويلة وكروب توب بشعارك أو تصميمك للفرق والفعاليات والزيّ الموحّد والعلامات التجارية في أنحاء المملكة.",
+      h1: "طباعة تيشيرتات حسب الطلب في الرياض",
+      intro: "أرسل لنا شعارك أو تصميمك ونطبعه على التيشيرتات التي تختارها، من الأمام أو الخلف أو على الصدر. ننفّذ العيّنات المفردة وطلبات الجملة للفرق والفعاليات والحملات.",
+      features: ["تيشيرتات بأكمام قصيرة وطويلة وكروب توب", "طباعة DTF وسلك سكرين وفينيل مع خيار التطريز", "طباعة على الأمام والخلف والصدر والأكمام", "ألوان ومقاسات متعددة للرجال والنساء والأطفال"],
+      uses: ["زيّ الشركات والفرق", "تيشيرتات الفعاليات والمتطوعين والموظفين", "تيشيرتات اليوم الوطني والحملات", "منتجات العلامة التجارية والتوزيعات"],
+    },
+  },
+  {
+    slug: "custom-hoodies-sweatshirts-jackets",
+    cat: "custom",
+    photo: img("custom-hoodies.webp"),
+    en: {
+      name: "Custom hoodies, sweatshirts & jackets",
+      card: "Hoodies, crew-neck sweatshirts and jackets printed or embroidered with your logo.",
+      title: "Custom Hoodies, Sweatshirts & Jackets Printing, Riyadh",
+      description: "Custom hoodie and sweatshirt printing in Riyadh: hoodies, crew-neck sweatshirts and jackets printed or embroidered with your logo for staff, teams, schools and brands in Saudi Arabia.",
+      h1: "Custom hoodies, sweatshirts and jackets",
+      intro: "Heavier garments carry a logo well and get worn for years. We print or embroider hoodies, sweatshirts and jackets with your design, in the colours and sizes your team needs.",
+      features: ["Pullover and zip hoodies, crew-neck sweatshirts and jackets", "Printing or embroidery, chosen to suit the fabric", "Chest, back and sleeve placements", "Sample piece before a bulk order"],
+      uses: ["Staff and crew winter uniforms", "School, university and club wear", "Corporate gifts for employees", "Brand and creator merchandise"],
+    },
+    ar: {
+      name: "هوديز وسويت شيرتات وجاكيتات حسب الطلب",
+      card: "هوديز وسويت شيرتات وجاكيتات مطبوعة أو مطرّزة بشعارك.",
+      title: "طباعة هوديز وسويت شيرتات وجاكيتات حسب الطلب في الرياض",
+      description: "طباعة هوديز وسويت شيرتات حسب الطلب في الرياض: هوديز وسويت شيرتات وجاكيتات مطبوعة أو مطرّزة بشعارك للموظفين والفرق والمدارس والعلامات التجارية في السعودية.",
+      h1: "هوديز وسويت شيرتات وجاكيتات حسب الطلب",
+      intro: "الملابس الثقيلة تُبرز الشعار جيداً وتُلبس سنوات. نطبع أو نطرّز الهوديز والسويت شيرتات والجاكيتات بتصميمك، بالألوان والمقاسات التي يحتاجها فريقك.",
+      features: ["هوديز بسحّاب وبدونه وسويت شيرتات وجاكيتات", "طباعة أو تطريز بحسب ما يناسب القماش", "مواضع على الصدر والظهر والأكمام", "قطعة عيّنة قبل طلب الجملة"],
+      uses: ["الزيّ الشتوي للموظفين والطواقم", "ملابس المدارس والجامعات والأندية", "هدايا الشركات للموظفين", "منتجات العلامات وصنّاع المحتوى"],
+    },
+  },
+  {
+    slug: "custom-bags-caps-mugs",
+    cat: "custom",
+    photo: img("custom-merch.webp"),
+    en: {
+      name: "Custom bags, caps & mugs",
+      card: "Paper bags, tote and travel bags, caps and mugs printed with your logo or artwork.",
+      title: "Custom Printed Bags, Caps & Mugs in Riyadh, KSA",
+      description: "Custom printed bags, caps and mugs in Riyadh: paper shopping bags, tote and duffel bags, baseball caps and ceramic mugs branded with your logo for shops, events and gifts.",
+      h1: "Custom printed bags, caps and mugs",
+      intro: "Everyday items put your logo in front of people again and again. We print paper bags for shops, fabric and travel bags, caps and mugs, and can pack them together as a branded set.",
+      features: ["Paper shopping bags, tote bags and duffel bags", "Baseball caps with print or embroidery", "Ceramic mugs with full-colour print", "Mixed sets packed for gifting or retail"],
+      uses: ["Retail and boutique packaging", "Event and exhibition giveaways", "Employee welcome kits", "Café, restaurant and brand merchandise"],
+    },
+    ar: {
+      name: "حقائب وكابات وأكواب حسب الطلب",
+      card: "أكياس ورقية وحقائب قماشية وحقائب سفر وكابات وأكواب مطبوعة بشعارك أو تصميمك.",
+      title: "طباعة حقائب وكابات وأكواب حسب الطلب في الرياض",
+      description: "طباعة حقائب وكابات وأكواب حسب الطلب في الرياض: أكياس تسوق ورقية وحقائب قماشية وحقائب سفر وكابات وأكواب سيراميك بشعارك للمحلات والفعاليات والهدايا.",
+      h1: "حقائب وكابات وأكواب مطبوعة حسب الطلب",
+      intro: "المنتجات اليومية تضع شعارك أمام الناس مرة بعد مرة. نطبع الأكياس الورقية للمحلات والحقائب القماشية وحقائب السفر والكابات والأكواب، ويمكننا تجهيزها معاً كطقم يحمل هويتك.",
+      features: ["أكياس تسوق ورقية وحقائب قماشية وحقائب سفر", "كابات بالطباعة أو التطريز", "أكواب سيراميك بطباعة ملوّنة كاملة", "أطقم متنوعة مجهّزة للإهداء أو البيع"],
+      uses: ["تغليف المتاجر والبوتيكات", "توزيعات الفعاليات والمعارض", "حقائب الترحيب بالموظفين", "منتجات الكافيهات والمطاعم والعلامات"],
     },
   },
 ]

@@ -142,6 +142,7 @@ export const en = {
     filterLabel: "Filter catalogue",
     filters: [
       { id: "all", label: "All" },
+      { id: "custom", label: "Custom printing" },
       { id: "print", label: "Print" },
       { id: "signage", label: "Signage" },
       { id: "display", label: "Displays" },

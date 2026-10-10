@@ -144,6 +144,7 @@ export const ar: Dict = {
     filterLabel: "تصفية المنتجات",
     filters: [
       { id: "all", label: "الكل" },
+      { id: "custom", label: "طباعة حسب الطلب" },
       { id: "print", label: "طباعة" },
       { id: "signage", label: "لوحات" },
       { id: "display", label: "منصات عرض" },

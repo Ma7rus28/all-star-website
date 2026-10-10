@@ -3,12 +3,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import { Flag, Gift, Lightbulb, Printer, RectangleVertical } from "lucide-react"
+import { Flag, Gift, Lightbulb, Printer, RectangleVertical, Shirt } from "lucide-react"
 import type { Dict } from "@/content"
 import type { Locale } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 const icons = {
+  custom: Shirt,
   print: Printer,
   signage: Lightbulb,
   display: RectangleVertical,
