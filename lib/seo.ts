@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { products } from "@/content/products"
 import { locales, type Locale } from "@/lib/i18n"
 import { site } from "@/lib/site"
 
@@ -10,7 +11,18 @@ export const siteUrl = (
 ).replace(/\/$/, "")
 
 /** Every indexable page, without the language prefix. */
-export const indexablePaths = ["", "/services", "/contact", "/pay", "/privacy", "/terms", "/refund-policy", "/cookies", "/data-request"]
+export const indexablePaths = [
+  "",
+  "/services",
+  "/contact",
+  ...products.map((p) => `/products/${p.slug}`),
+  "/pay",
+  "/privacy",
+  "/terms",
+  "/refund-policy",
+  "/cookies",
+  "/data-request",
+]
 
 const languageLinks = (path: string) => ({
   ...Object.fromEntries(locales.map((l) => [l, `/${l}${path}`])),

@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation"
 import { getDict } from "@/content"
+import { products } from "@/content/products"
 import { BriefBuilder } from "@/components/site/brief-builder"
 import { Catalogue } from "@/components/site/catalogue"
 import { Hero } from "@/components/site/hero"
@@ -36,7 +37,17 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <section id="catalogue" className="paper py-24 md:py-32">
         <div className="wrap">
           <SectionHead eyebrow={t.catalogue.eyebrow} title={t.catalogue.title} sub={t.catalogue.sub} />
-          <Catalogue t={t.catalogue} lang={lang} />
+          <Catalogue
+            t={t.catalogue}
+            lang={lang}
+            items={products.map((p) => ({
+              slug: p.slug,
+              cat: p.cat,
+              name: p[lang].name,
+              desc: p[lang].card,
+              photo: p.photo,
+            }))}
+          />
         </div>
       </section>
 
