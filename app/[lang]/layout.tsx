@@ -7,7 +7,7 @@ import {
 } from "next/font/google"
 import { notFound } from "next/navigation"
 import { getDict } from "@/content"
-import { CookieConsent } from "@/components/site/cookie-consent"
+import { ConsentedAnalytics, CookieConsent } from "@/components/site/cookie-consent"
 import { Footer } from "@/components/site/footer"
 import { Header } from "@/components/site/header"
 import { Providers } from "@/components/site/providers"
@@ -83,6 +83,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           </main>
           <Footer lang={lang} dict={dict} />
           <CookieConsent lang={lang} t={dict.cookie} />
+          <ConsentedAnalytics />
         </Providers>
       </body>
     </html>

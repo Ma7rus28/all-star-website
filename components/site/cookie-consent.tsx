@@ -1,5 +1,6 @@
 "use client"
 
+import { Analytics } from "@vercel/analytics/next"
 import Link from "next/link"
 import { useEffect, useState, useSyncExternalStore } from "react"
 import type { Dict } from "@/content"
@@ -53,6 +54,18 @@ export const hasAnalyticsConsent = () => {
   } catch {
     return false
   }
+}
+
+/** Vercel Web Analytics, loaded only after the visitor opts in to analytics. */
+export function ConsentedAnalytics() {
+  const stored = useSyncExternalStore(subscribe, read, () => null)
+  let allowed = false
+  try {
+    allowed = (JSON.parse(stored ?? "{}") as Partial<Consent>).analytics === true
+  } catch {
+    allowed = false
+  }
+  return allowed ? <Analytics /> : null
 }
 
 export function CookieSettingsButton({

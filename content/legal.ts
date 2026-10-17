@@ -179,7 +179,7 @@ const en: Record<LegalSlug, LegalDoc> = {
       },
       {
         h: "Analytics (optional)",
-        p: ["We may use analytics to count page visits. Analytics is off by default and loads only if you choose “Accept all” or switch it on in Cookie settings. At the moment no analytics tool is installed, so nothing is set in this category."],
+        p: ["We use Vercel Web Analytics to count page visits and see which pages are useful. It does not set cookies, does not store your IP address and does not follow you across other websites. It is off by default and loads only if you choose “Accept all” or switch it on in Cookie settings."],
       },
       {
         h: "Advertising and tracking",
@@ -319,7 +319,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
         ],
         p: ["هذه العناصر لا تتتبّعك ولا يمكن إيقافها لأن الموقع يحتاج إليها ليعمل."],
       },
-      { h: "التحليلات (اختيارية)", p: ["قد نستخدم التحليلات لإحصاء زيارات الصفحات. التحليلات متوقفة افتراضياً ولا تعمل إلا إذا اخترت «قبول الكل» أو فعّلتها من إعدادات ملفات تعريف الارتباط. لا توجد حالياً أي أداة تحليلات مثبّتة، فلا يُخزَّن شيء ضمن هذه الفئة."] },
+      { h: "التحليلات (اختيارية)", p: ["نستخدم Vercel Web Analytics لإحصاء زيارات الصفحات ومعرفة الصفحات المفيدة. لا تضع هذه الأداة ملفات تعريف ارتباط، ولا تحفظ عنوان IP الخاص بك، ولا تتتبّعك في المواقع الأخرى. وهي متوقفة افتراضياً ولا تعمل إلا إذا اخترت «قبول الكل» أو فعّلتها من إعدادات ملفات تعريف الارتباط."] },
       { h: "الإعلانات والتتبّع", p: ["لا نستخدم ملفات ارتباط إعلانية ولا بكسلات تتبّع ولا أدوات تتبّع لوسائل التواصل الاجتماعي. الخطوط تُحمَّل من نطاق موقعنا، فلا يتصل تحميل الصفحة بمزوّد خطوط."] },
       { h: "الأطراف الأخرى", p: ["عند اختيارك الدفع بالبطاقة تنتقل من هذا الموقع إلى صفحة الدفع لدى «ميسّر»، التي تضع ملفات ارتباط خاصة بها وفق سياستها."] },
       { h: "تغيير اختيارك", p: ["استخدم رابط «إعدادات ملفات تعريف الارتباط» أسفل الصفحة في أي وقت. رفض الملفات الاختيارية يتم بنقرة واحدة ولا يحدّ مما يمكنك فعله في الموقع."] },
