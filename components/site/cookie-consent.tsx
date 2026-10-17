@@ -1,6 +1,7 @@
 "use client"
 
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Link from "next/link"
 import { useEffect, useState, useSyncExternalStore } from "react"
 import type { Dict } from "@/content"
@@ -65,7 +66,12 @@ export function ConsentedAnalytics() {
   } catch {
     allowed = false
   }
-  return allowed ? <Analytics /> : null
+  return allowed ? (
+    <>
+      <Analytics />
+      <SpeedInsights />
+    </>
+  ) : null
 }
 
 export function CookieSettingsButton({
