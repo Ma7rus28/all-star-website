@@ -4,10 +4,19 @@ import { locales, type Locale } from "@/lib/i18n"
 import { site } from "@/lib/site"
 
 /** Public address of the live site. Set SITE_URL on the host so links in Google point to the real domain. */
-// On Vercel the production domain is picked up automatically when SITE_URL is not set.
-const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL
+// Without SITE_URL, production builds use the real domain (never the .vercel.app address,
+// which would point Google at the wrong site); previews use their own URL, local dev uses localhost.
+const productionUrl = "https://www.allstar-production.com"
+const vercelHost = process.env.VERCEL_URL
 export const siteUrl = (
-  process.env.SITE_URL ?? (vercelHost ? `https://${vercelHost}` : "http://localhost:3000")
+  process.env.SITE_URL ??
+  (process.env.VERCEL_ENV === "production"
+    ? productionUrl
+    : vercelHost
+      ? `https://${vercelHost}`
+      : process.env.NODE_ENV === "production"
+        ? productionUrl
+        : "http://localhost:3000")
 ).replace(/\/$/, "")
 
 /** Every indexable page, without the language prefix. */

@@ -9,7 +9,7 @@ export const site = {
   address: "Muzzamah, As Salihiya, Ar Riyadh, Saudi Arabia",
   addressAr: "الصالحية، الرياض، المملكة العربية السعودية",
   phone: "+966 55 037 5791",
-  whatsapp: "+966 55 037 5791",
+  whatsapp: "+966 57 895 2076",
   email: "mahrus0murshed@gmail.com",
   privacyEmail: "mahrus0murshed@gmail.com",
   hours: "Sun–Thu, 9:00–18:00 (AST)",
