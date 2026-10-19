@@ -2,6 +2,7 @@ import Link from "next/link"
 import type { Dict } from "@/content"
 import type { Locale } from "@/lib/i18n"
 import { isSet, site, telHref } from "@/lib/site"
+import { landings } from "@/content/landings"
 import { CookieSettingsButton } from "./cookie-consent"
 import { Logo, navLinks } from "./header"
 
@@ -20,7 +21,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dict }) {
 
   return (
     <footer className="border-t border-border bg-ink">
-      <div className="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr]">
+      <div className="wrap grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1fr_1.3fr]">
         <div>
           <Logo lang={lang} label={dict.nav.home} />
           <p className="mt-4 max-w-xs text-muted-foreground">{t.blurb}</p>
@@ -34,6 +35,20 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dict }) {
               <li key={l.href}>
                 <Link href={l.href} className={linkClass}>
                   {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <nav aria-label={dict.riyadh.footerTitle}>
+          <h2 className="text-sm font-semibold tracking-wide text-foreground uppercase">
+            {dict.riyadh.footerTitle}
+          </h2>
+          <ul className="mt-3">
+            {landings.map((l) => (
+              <li key={l.slug}>
+                <Link href={`/${lang}/riyadh/${l.slug}`} className={linkClass}>
+                  {l[lang].h1}
                 </Link>
               </li>
             ))}

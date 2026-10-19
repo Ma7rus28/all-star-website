@@ -7,6 +7,7 @@ import { Hero } from "@/components/site/hero"
 import { Pillars } from "@/components/site/pillars"
 import { CtaBand, Faq, Marquee, Pricing, Process, SectionHead } from "@/components/site/sections"
 import { hasLocale } from "@/lib/i18n"
+import { faqJsonLd } from "@/lib/seo"
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params
@@ -52,6 +53,10 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       <Pricing t={t.pricing} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(t.faq.items)).replace(/</g, "\\u003c") }}
+      />
       <Faq t={t.faq} />
       <CtaBand t={t.cta} lang={lang} />
     </>

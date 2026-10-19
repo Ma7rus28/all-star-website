@@ -26,11 +26,11 @@ export const en = {
     switchLabel: "التبديل إلى العربية",
   },
   hero: {
-    eyebrow: "Events · Exhibitions · Advertising",
+    eyebrow: "Events · Exhibitions · Advertising · Riyadh",
     before: "We stage",
     words: ["events", "exhibition stands", "campaigns"],
     after: "people stop for.",
-    sub: "One Saudi-based team for the idea, the build and the day itself — from the first sketch of your stand to the last banner on the street.",
+    sub: "One Riyadh-based team for the idea, the build and the day itself — from the first sketch of your stand to the last banner on the street.",
     cta: "Request a quote",
     cta2: "Explore services",
     canvasLabel: "Decorative animated night sky with stage spotlights",
@@ -349,6 +349,14 @@ export const en = {
     home: "Back to home",
   },
   legalNote: "Last updated",
+  riyadh: {
+    footerTitle: "In Riyadh",
+    products: "Products for this service",
+    faq: "Frequently asked questions",
+    quote: "Request a quote",
+    learnMore: "More about",
+    inRiyadh: "in Riyadh",
+  },
 }
 
 type Widen<T> = T extends string

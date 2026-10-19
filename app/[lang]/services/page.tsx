@@ -4,6 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowRight, Check } from "lucide-react"
 import { getDict } from "@/content"
+import { landings } from "@/content/landings"
 import { artById } from "@/components/site/illustrations"
 import { Reveal } from "@/components/site/reveal"
 import { CtaBand, PageHead, Process } from "@/components/site/sections"
@@ -66,6 +67,19 @@ export default async function Services({ params }: PageProps<"/[lang]/services">
                     {t.pillars.cta} {item.name}
                     <ArrowRight aria-hidden="true" className="size-5 rtl:rotate-180" />
                   </Link>
+                  {(() => {
+                    const landing = landings.find((l) => l.pillar === item.id)
+                    return landing ? (
+                      <p className="mt-5">
+                        <Link
+                          href={`/${lang}/riyadh/${landing.slug}`}
+                          className="inline-flex min-h-11 items-center font-semibold text-gold underline underline-offset-4"
+                        >
+                          {landing[lang].h1}
+                        </Link>
+                      </p>
+                    ) : null
+                  })()}
                 </div>
               </section>
             </Reveal>
