@@ -24,6 +24,7 @@ export const siteUrl = (
 export const indexablePaths = [
   "",
   "/services",
+  "/projects",
   "/contact",
   ...landings.map((l) => `/riyadh/${l.slug}`),
   ...products.map((p) => `/products/${p.slug}`),

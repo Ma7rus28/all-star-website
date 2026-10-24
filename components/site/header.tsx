@@ -7,6 +7,7 @@ import { MobileNav } from "./mobile-nav"
 
 export const navLinks = (lang: Locale, t: Dict["nav"]) => [
   { href: `/${lang}/services`, label: t.services },
+  { href: `/${lang}/projects`, label: t.projects },
   { href: `/${lang}#process`, label: t.process },
   { href: `/${lang}#catalogue`, label: t.catalogue },
   { href: `/${lang}/pay`, label: t.pay },

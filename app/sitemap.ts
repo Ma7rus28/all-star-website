@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: site.legalUpdated,
       changeFrequency: path === "" ? ("weekly" as const) : ("monthly" as const),
       priority:
-        path === "" ? 1 : path === "/services" || path === "/contact" ? 0.8 : path.startsWith("/riyadh/") ? 0.9 : path.startsWith("/products/") ? 0.7 : 0.4,
+        path === "" ? 1 : path === "/services" || path === "/projects" || path === "/contact" ? 0.8 : path.startsWith("/riyadh/") ? 0.9 : path.startsWith("/products/") ? 0.7 : 0.4,
       alternates: {
         languages: Object.fromEntries(locales.map((l) => [l, `${siteUrl}/${l}${path}`])),
       },

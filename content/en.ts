@@ -12,6 +12,7 @@ export const en = {
   },
   nav: {
     services: "Services",
+    projects: "Projects",
     process: "Process",
     catalogue: "Catalogue",
     pay: "Pay invoice",
@@ -349,6 +350,16 @@ export const en = {
     home: "Back to home",
   },
   legalNote: "Last updated",
+  projectsPage: {
+    title: "Projects",
+    sub: "Events, stands and campaigns we have delivered in Riyadh and across Saudi Arabia.",
+    metaTitle: "Our Projects | Events & Exhibitions in Riyadh | All Star Productions",
+    metaDescription: "See events, exhibition stands and brand activations delivered by All Star Productions in Riyadh and across Saudi Arabia.",
+    scope: "What we delivered",
+    video: "Project video",
+    cta: "Planning something similar?",
+    ctaButton: "Request a quote",
+  },
   riyadh: {
     footerTitle: "In Riyadh",
     products: "Products for this service",
