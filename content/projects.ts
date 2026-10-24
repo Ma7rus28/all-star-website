@@ -29,14 +29,14 @@ export const projects: Project[] = [
     en: {
       title: "Riyadh Season concert",
       location: "Riyadh",
-      summary: "Event production for a Riyadh Season concert night: guest arrival and registration, wristband entry, branded lounge and hospitality areas, and venue branding through to the main stage.",
-      scope: ["Guest registration and entry", "Wristbands and access control", "Branded lounge and bar areas", "Venue and stage branding"],
+      summary: "Event production for a Riyadh Season concert night: wristband entry and access control, branded lounge and bar areas, acrylic signage and posters, and venue branding through to the main stage.",
+      scope: ["Wristbands and access control", "Branded lounge and bar areas", "Venue and stage branding", "Acrylic signage", "Posters"],
     },
     ar: {
       title: "حفل موسم الرياض",
       location: "الرياض",
-      summary: "إنتاج فعالية ليلة حفل ضمن موسم الرياض: استقبال الضيوف وتسجيلهم، والدخول بالأساور، وصالات الضيافة التي تحمل الهوية، وهوية الموقع وصولاً إلى المسرح الرئيسي.",
-      scope: ["تسجيل الضيوف والدخول", "الأساور وتنظيم الدخول", "صالات وأركان ضيافة بالهوية", "هوية الموقع والمسرح"],
+      summary: "إنتاج فعالية ليلة حفل ضمن موسم الرياض: الدخول بالأساور وتنظيمه، وصالات وأركان ضيافة تحمل الهوية، ولوحات أكريليك وبوسترات، وهوية الموقع وصولاً إلى المسرح الرئيسي.",
+      scope: ["الأساور وتنظيم الدخول", "صالات وأركان ضيافة بالهوية", "هوية الموقع والمسرح", "لوحات أكريليك", "بوسترات"],
     },
   },
 ]
