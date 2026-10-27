@@ -22,11 +22,15 @@ export default async function Contact({ params }: PageProps<"/[lang]/contact">) 
   const t = dict.contact
   const link = "text-gold underline underline-offset-4"
 
-  const rows: { label: string; value: string; href?: string; ltr?: boolean }[] = [
+  const rows: { label: string; value: string; href?: string; ltr?: boolean; more?: { href: string; label: string } }[] = [
     { label: t.legalName, value: site.name },
     { label: t.cr, value: site.cr, ltr: true },
     { label: t.vat, value: site.vat, ltr: true },
-    { label: t.address, value: lang === "ar" ? site.addressAr : site.address },
+    {
+      label: t.address,
+      value: lang === "ar" ? site.addressAr : site.address,
+      more: { href: site.googleProfile, label: t.map },
+    },
     { label: t.phone, value: site.phone, href: isSet(site.phone) ? telHref(site.phone) : undefined, ltr: true },
     { label: t.whatsapp, value: site.whatsapp, href: isSet(site.whatsapp) ? waHref(site.whatsapp) : undefined, ltr: true },
     { label: t.email, value: site.email, href: isSet(site.email) ? `mailto:${site.email}` : undefined, ltr: true },
@@ -57,6 +61,11 @@ export default async function Contact({ params }: PageProps<"/[lang]/contact">) 
                     <bdi dir="ltr">{r.value}</bdi>
                   ) : (
                     r.value
+                  )}
+                  {r.more && (
+                    <a href={r.more.href} target="_blank" rel="noopener" className={`${link} mt-1 block w-fit text-sm`}>
+                      {r.more.label}
+                    </a>
                   )}
                 </dd>
               </div>

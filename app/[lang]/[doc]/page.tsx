@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/[doc]">): 
   const { lang, doc } = await params
   if (!hasLocale(lang) || !isLegal(doc)) return {}
   const legal = getLegal(lang, doc)
-  return pageMeta(lang, `/${doc}`, legal.title, legal.intro)
+  return pageMeta(lang, `/${doc}`, legal.title, legal.description ?? legal.intro)
 }
 
 export default async function Legal({ params }: PageProps<"/[lang]/[doc]">) {

@@ -47,7 +47,7 @@ export const landings: Landing[] = [
     quoteService: "event",
     en: {
       title: "Event Management Company in Riyadh | All Star Productions",
-      description: "Event management company in Riyadh for corporate events, conferences, product launches, gala dinners and National Day activations. Stage, AV, branding and on-site teams, with itemised quotes.",
+      description: "Event management company in Riyadh: corporate events, conferences, product launches, gala dinners and National Day activations, with stage, AV and branding.",
       h1: "Event management company in Riyadh",
       intro: [
         "All Star Productions plans and runs corporate and public events in Riyadh: conferences and forums, product launches and openings, gala dinners, award nights and National Day and Founding Day activations.",
@@ -77,7 +77,7 @@ export const landings: Landing[] = [
     },
     ar: {
       title: "شركة تنظيم فعاليات في الرياض | أول ستار للإنتاج",
-      description: "شركة تنظيم فعاليات في الرياض لفعاليات الشركات والمؤتمرات وحفلات التدشين وحفلات العشاء وفعاليات اليوم الوطني. مسرح وأنظمة صوت وشاشات وهوية وفريق موقع مع عروض أسعار مفصّلة.",
+      description: "شركة تنظيم فعاليات في الرياض لفعاليات الشركات والمؤتمرات وحفلات التدشين والعشاء واليوم الوطني. مسرح وصوت وشاشات وهوية وفريق موقع مع عروض أسعار مفصّلة.",
       h1: "شركة تنظيم فعاليات في الرياض",
       intro: [
         "تخطّط أول ستار للإنتاج لفعاليات الشركات والفعاليات العامة في الرياض وتديرها: المؤتمرات والمنتديات، وحفلات التدشين والافتتاح، وحفلات العشاء وتوزيع الجوائز، وفعاليات اليوم الوطني ويوم التأسيس.",
@@ -113,7 +113,7 @@ export const landings: Landing[] = [
     quoteService: "stand",
     en: {
       title: "Exhibition Stand Builders in Riyadh | Stand Design & Build",
-      description: "Exhibition stand builders in Riyadh: custom stand design with 3D visuals, fabrication, graphics, lighting, installation and dismantling for trade shows and pavilions in Saudi Arabia.",
+      description: "Exhibition stand builders in Riyadh: custom stand design with 3D visuals, fabrication, graphics, lighting, installation and dismantling for trade shows.",
       h1: "Exhibition stand design and build in Riyadh",
       intro: [
         "We design, build, install and dismantle exhibition stands for companies showing at trade fairs and conferences in Riyadh, from shell-scheme upgrades to custom double-deck stands and country pavilions.",
@@ -179,7 +179,7 @@ export const landings: Landing[] = [
     quoteService: "advertising",
     en: {
       title: "Advertising, Signage & Printing Company in Riyadh",
-      description: "Advertising and signage company in Riyadh: shop signs, 3D LED letters, light boxes, large-format banner printing, vehicle wraps, flags and building wraps, produced and installed.",
+      description: "Advertising and signage company in Riyadh: shop signs, 3D LED letters, light boxes, banners, stickers, vehicle wraps, flags and building wraps, installed.",
       h1: "Advertising, signage and printing in Riyadh",
       intro: [
         "We produce and install the advertising that puts a brand on Riyadh's streets: shop-front signs and 3D LED letters, light boxes, large-format banners, building and hoarding wraps, vehicle wraps and flags.",

@@ -32,7 +32,8 @@ export default async function RiyadhLanding({ params }: PageProps<"/[lang]/riyad
   const t = getDict(lang)
   const c = landing[lang]
   const photo = pillarPhotos[landing.pillar]
-  const related = products.filter((p) => landing.productCats.includes(p.cat)).slice(0, 8)
+  // Every product in the linked categories, so each product page is linked from a Riyadh page.
+  const related = products.filter((p) => landing.productCats.includes(p.cat))
   const url = `${siteUrl}/${lang}/riyadh/${slug}`
   const quoteHref = `/${lang}/contact?service=${landing.quoteService}`
 
@@ -111,7 +112,8 @@ export default async function RiyadhLanding({ params }: PageProps<"/[lang]/riyad
                 src={photo.src}
                 alt={photo.alt[lang]}
                 fill
-                priority
+                loading="eager"
+                fetchPriority="high"
                 sizes="(min-width: 1024px) 45vw, 92vw"
                 className={photo.contain ? "object-contain" : "object-cover"}
               />

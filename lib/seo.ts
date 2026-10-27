@@ -20,6 +20,9 @@ export const siteUrl = (
         : "http://localhost:3000")
 ).replace(/\/$/, "")
 
+/** Date of the last content change on the site (not the legal pages). Update it with each content release; the sitemap shows it to search engines. */
+export const contentUpdated = "2026-10-27"
+
 /** Every indexable page, without the language prefix. */
 export const indexablePaths = [
   "",
@@ -44,6 +47,14 @@ const languageLinks = (path: string) => ({
 /** Title, description, canonical address and language alternates for one page. */
 export function pageMeta(lang: Locale, path: string, title: string, description: string): Metadata {
   const brand = lang === "ar" ? site.nameAr : site.name
+  // A page that sets openGraph replaces the layout's, including the image from
+  // app/[lang]/opengraph-image.tsx, so name that image here for every page.
+  const image = {
+    url: `/${lang}/opengraph-image`,
+    width: 1200,
+    height: 630,
+    alt: lang === "ar" ? "أول ستار للإنتاج — فعاليات ومعارض ودعاية في الرياض، السعودية" : "All Star Productions — Events, Exhibitions and Advertising in Riyadh, Saudi Arabia",
+  }
   return {
     title,
     description,
@@ -55,8 +66,9 @@ export function pageMeta(lang: Locale, path: string, title: string, description:
       siteName: brand,
       locale: lang === "ar" ? "ar_SA" : "en_US",
       type: "website",
+      images: [image],
     },
-    twitter: { card: "summary_large_image", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [image] },
   }
 }
 
@@ -77,10 +89,11 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
     vatID: site.vat,
     address: {
       "@type": "PostalAddress",
-      streetAddress: lang === "ar" ? site.addressAr : site.address,
-      addressLocality: lang === "ar" ? "الرياض" : "Riyadh",
+      streetAddress: lang === "ar" ? site.streetAr : site.street,
+      addressLocality: lang === "ar" ? site.cityAr : site.city,
       addressRegion: lang === "ar" ? "منطقة الرياض" : "Riyadh Province",
-      addressCountry: "SA",
+      postalCode: site.postalCode,
+      addressCountry: site.countryCode,
     },
     areaServed: [
       { "@type": "City", name: lang === "ar" ? "الرياض" : "Riyadh" },
@@ -102,6 +115,7 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
       areaServed: "SA",
       availableLanguage: ["Arabic", "English"],
     },
+    hasMap: site.googleProfile,
     sameAs: [`https://wa.me/${site.whatsapp.replace(/\D/g, "")}`],
     knowsLanguage: ["en", "ar"],
     makesOffer: services.map((name) => ({

@@ -1,28 +1,19 @@
 "use client"
 
-import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
-import { Flag, Gift, Lightbulb, Printer, RectangleVertical, Shirt } from "lucide-react"
 import type { Dict } from "@/content"
+import type { Product } from "@/content/products"
+import { catIcons, ProductVisual } from "@/components/site/product-visual"
 import type { Locale } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
-const icons = {
-  custom: Shirt,
-  print: Printer,
-  signage: Lightbulb,
-  display: RectangleVertical,
-  outdoor: Flag,
-  gifts: Gift,
-} as const
-
 export type CatalogueItem = {
   slug: string
-  cat: string
+  cat: Product["cat"]
   name: string
   desc: string
-  photo: { src: string; zoom?: boolean }
+  photo: Product["photo"]
 }
 
 export function Catalogue({
@@ -63,7 +54,7 @@ export function Catalogue({
       </p>
       <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => {
-          const Icon = icons[item.cat as keyof typeof icons]
+          const Icon = catIcons[item.cat]
           return (
             <li
               key={item.slug}
@@ -71,18 +62,16 @@ export function Catalogue({
               style={{ animation: "word-in 0.4s ease-out" }}
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                {(
-                  <Image
-                    src={item.photo.src}
-                    alt={item.name}
-                    fill
-                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                    className={cn(
-                      "object-cover transition-transform duration-500",
-                      item.photo.zoom ? "scale-[1.45] group-hover:scale-[1.52]" : "group-hover:scale-105"
-                    )}
-                  />
-                )}
+                <ProductVisual
+                  photo={item.photo}
+                  cat={item.cat}
+                  alt={item.name}
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  className={cn(
+                    "object-cover transition-transform duration-500",
+                    item.photo?.zoom ? "scale-[1.45] group-hover:scale-[1.52]" : "group-hover:scale-105"
+                  )}
+                />
                 <span className="absolute start-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-card px-3 py-1 text-xs font-semibold tracking-wide uppercase">
                   <Icon aria-hidden="true" className="size-3.5 text-gold" />
                   {labelOf(item.cat)}

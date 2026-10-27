@@ -1,12 +1,12 @@
 export const en = {
   meta: {
-    title: "Event Management, Exhibition Stands & Advertising in Riyadh | All Star Productions",
+    title: "Event & Exhibition Company in Riyadh | All Star Productions",
     description:
-      "All Star Productions is a Riyadh events and exhibitions company: event management, exhibition stand design and build, signage, large-format printing and outdoor advertising across Saudi Arabia. Request an itemised quote.",
-    servicesTitle: "Event Management, Exhibition Stand Builders & Advertising Services in Riyadh",
+      "All Star Productions is an events and exhibitions company in Riyadh: event management, exhibition stands, signage, printing and outdoor advertising across KSA.",
+    servicesTitle: "Events, Exhibition Stands & Advertising Services in Riyadh",
     servicesDescription:
-      "Corporate events, product launches, custom exhibition stands, pavilions, signage, vehicle branding and large-format printing in Riyadh, Jeddah and across Saudi Arabia.",
-    contactTitle: "Request a Quote — Events, Exhibition Stands & Printing in Saudi Arabia",
+      "Corporate events, product launches, custom exhibition stands, pavilions, signage, vehicle branding and large-format printing in Riyadh, Jeddah and across KSA.",
+    contactTitle: "Contact Us for a Quote in Riyadh",
     contactDescription:
       "Tell us about your event, exhibition stand or advertising job and get an itemised quote in SAR with VAT shown separately. Based in Riyadh.",
   },
@@ -139,7 +139,7 @@ export const en = {
   catalogue: {
     eyebrow: "Catalogue",
     title: "Printing, signage and advertising products in Saudi Arabia.",
-    sub: "Banner printing, shop signs, display stands, vehicle branding and corporate gifts, produced in Riyadh and delivered across the Kingdom. Sizes, materials and quantities are quoted per job.",
+    sub: "Banner printing, stickers, shop signs, display stands, vehicle branding, branded safety wear and corporate gifts, produced in Riyadh and delivered across the Kingdom. Sizes, materials and quantities are quoted per job.",
     filterLabel: "Filter catalogue",
     filters: [
       { id: "all", label: "All" },
@@ -202,6 +202,7 @@ export const en = {
     cr: "Commercial Registration",
     vat: "VAT number",
     address: "Address",
+    map: "Find us on Google Maps",
     phone: "Phone",
     whatsapp: "WhatsApp",
     email: "Email",
@@ -353,7 +354,7 @@ export const en = {
   projectsPage: {
     title: "Projects",
     sub: "Events, stands and campaigns we have delivered in Riyadh and across Saudi Arabia.",
-    metaTitle: "Our Projects | Events & Exhibitions in Riyadh | All Star Productions",
+    metaTitle: "Event & Exhibition Projects in Riyadh | All Star Productions",
     metaDescription: "See events, exhibition stands and brand activations delivered by All Star Productions in Riyadh and across Saudi Arabia.",
     scope: "What we delivered",
     video: "Project video",

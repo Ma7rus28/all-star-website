@@ -18,7 +18,8 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/services">
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const t = getDict(lang).meta
-  return pageMeta(lang, "/services", t.servicesTitle, t.servicesDescription)
+  // The title already names the services and the city; skip the brand suffix to keep it short.
+  return { ...pageMeta(lang, "/services", t.servicesTitle, t.servicesDescription), title: { absolute: t.servicesTitle } }
 }
 
 export default async function Services({ params }: PageProps<"/[lang]/services">) {

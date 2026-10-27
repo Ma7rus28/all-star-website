@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowRight, Check } from "lucide-react"
 import { getDict } from "@/content"
 import { getProduct, products } from "@/content/products"
+import { ProductVisual } from "@/components/site/product-visual"
 import { CtaBand } from "@/components/site/sections"
 import { hasLocale, locales } from "@/lib/i18n"
 import { pageMeta, siteUrl } from "@/lib/seo"
@@ -35,7 +35,14 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
   const c = product[lang]
   const brand = lang === "ar" ? site.nameAr : site.name
   const url = `${siteUrl}/${lang}/products/${slug}`
-  const related = products.filter((p) => p.cat === product.cat && p.slug !== slug).slice(0, 3)
+  // Hand-picked related products first, then the rest of the same category.
+  const related = [
+    ...(product.related ?? []).map(getProduct),
+    ...products.filter((p) => p.cat === product.cat),
+  ]
+    .filter((p, i, all): p is NonNullable<typeof p> => !!p && p.slug !== slug && all.indexOf(p) === i)
+    .slice(0, 3)
+  const catLabel = t.catalogue.filters.find((f) => f.id === product.cat)?.label
   const quoteHref = `/${lang}/contact?service=advertising&needs=${encodeURIComponent(c.name)}`
 
   const jsonLd = [
@@ -46,7 +53,7 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
       description: c.description,
       serviceType: c.name,
       url,
-      image: `${siteUrl}${product.photo.src}`,
+      ...(product.photo && { image: `${siteUrl}${product.photo.src}` }),
       provider: { "@id": `${siteUrl}/#business` },
       areaServed: { "@type": "Country", name: "Saudi Arabia" },
     },
@@ -99,13 +106,15 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
             </div>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-muted">
-            <Image
-              src={product.photo.src}
+            <ProductVisual
+              photo={product.photo}
+              cat={product.cat}
               alt={c.h1}
-              fill
-              priority
+              hero
+              large
+              label={catLabel}
               sizes="(min-width: 1024px) 45vw, 92vw"
-              className={product.photo.zoom ? "scale-[1.45] object-cover" : "object-cover"}
+              className={product.photo?.zoom ? "scale-[1.45] object-cover" : "object-cover"}
             />
           </div>
         </div>
@@ -152,13 +161,13 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
                 <li key={p.slug} className="group overflow-hidden rounded-2xl border border-border bg-card">
                   <Link href={`/${lang}/products/${p.slug}`} className="block">
                     <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-                      <Image
-                        src={p.photo.src}
+                      <ProductVisual
+                        photo={p.photo}
+                        cat={p.cat}
                         alt=""
-                        fill
                         sizes="(min-width: 640px) 30vw, 92vw"
                         className={
-                          p.photo.zoom
+                          p.photo?.zoom
                             ? "scale-[1.45] object-cover"
                             : "object-cover transition-transform duration-500 group-hover:scale-105"
                         }

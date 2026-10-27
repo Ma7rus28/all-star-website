@@ -8,6 +8,8 @@ import { site } from "@/lib/site"
 export type LegalDoc = {
   title: string
   intro: string
+  /** Meta description, when the intro is longer than about 155 characters. */
+  description?: string
   sections: { h: string; p?: string[]; ul?: string[] }[]
 }
 
@@ -17,6 +19,7 @@ const cAr = site.nameAr
 const en: Record<LegalSlug, LegalDoc> = {
   privacy: {
     title: "Privacy Policy",
+    description: `How ${c} collects, uses and protects personal data on this website, and your rights under the Saudi Personal Data Protection Law (PDPL).`,
     intro: `This policy explains what personal data ${c} (“we”) collects through this website, why, and the choices you have. It is written to follow the Saudi Personal Data Protection Law (PDPL).`,
     sections: [
       {
@@ -92,6 +95,7 @@ const en: Record<LegalSlug, LegalDoc> = {
   },
   terms: {
     title: "Terms of Service",
+    description: `Terms for using this website and ordering services from ${c}. A signed quote or contract for a project takes priority where they differ.`,
     intro: `These terms apply when you use this website or order services from ${c}. A signed quote or contract for a specific project takes priority over these terms where they differ.`,
     sections: [
       { h: "About us", p: [`${site.name}, Commercial Registration ${site.cr}, VAT ${site.vat}, ${site.address}. Contact: ${site.email}, ${site.phone}.`] },
@@ -135,6 +139,7 @@ const en: Record<LegalSlug, LegalDoc> = {
   },
   "refund-policy": {
     title: "Refund & Cancellation Policy",
+    description: `How refunds and cancellations work at ${c}: what is refundable at each stage of custom work, unless your signed quote says otherwise.`,
     intro: "Most of what we make is custom-built for one client and one date, so refunds depend on how far the work has progressed. The stages below apply unless your signed quote says otherwise.",
     sections: [
       {
@@ -200,6 +205,7 @@ const en: Record<LegalSlug, LegalDoc> = {
 const ar: Record<LegalSlug, LegalDoc> = {
   privacy: {
     title: "سياسة الخصوصية",
+    description: `كيف تجمع ${cAr} البيانات الشخصية عبر هذا الموقع وتستخدمها وتحميها، وحقوقك وفق نظام حماية البيانات الشخصية في المملكة العربية السعودية.`,
     intro: `توضّح هذه السياسة البيانات الشخصية التي تجمعها ${cAr} («نحن») عبر هذا الموقع، وأسباب جمعها، والخيارات المتاحة لك. وقد أُعدّت وفق نظام حماية البيانات الشخصية في المملكة العربية السعودية.`,
     sections: [
       {
