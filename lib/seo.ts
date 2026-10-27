@@ -103,9 +103,9 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
     currenciesAccepted: "SAR",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      dayOfWeek: ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
       opens: "09:00",
-      closes: "18:00",
+      closes: "21:00",
     },
     contactPoint: {
       "@type": "ContactPoint",

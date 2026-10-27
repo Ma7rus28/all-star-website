@@ -21,8 +21,8 @@ export const site = {
   whatsapp: "+966 57 895 2076",
   email: "mahrus0murshed@gmail.com",
   privacyEmail: "mahrus0murshed@gmail.com",
-  hours: "Sun–Thu, 9:00–18:00 (AST)",
-  hoursAr: "الأحد – الخميس، 9:00 – 18:00",
+  hours: "Sat–Thu, 9:00–21:00 (AST)",
+  hoursAr: "السبت – الخميس، 9:00 – 21:00",
   legalUpdated: "2026-10-27",
 } as const
 
