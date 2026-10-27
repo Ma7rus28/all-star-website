@@ -325,9 +325,9 @@ export const en = {
   },
   projectsPage: {
     title: "Projects",
-    sub: "Events, stands and campaigns we have delivered in Riyadh and across Saudi Arabia.",
+    sub: "Events, product launches and signage we have delivered in Riyadh and across Saudi Arabia.",
     metaTitle: "Event & Exhibition Projects in Riyadh | All Star Productions",
-    metaDescription: "See events, exhibition stands and brand activations delivered by All Star Productions in Riyadh and across Saudi Arabia.",
+    metaDescription: "See events, product launches and signage delivered by All Star Productions in Riyadh and across Saudi Arabia.",
     scope: "What we delivered",
     video: "Project video",
     cta: "Planning something similar?",
