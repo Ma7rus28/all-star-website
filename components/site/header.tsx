@@ -1,16 +1,17 @@
 import Link from "next/link"
 import type { Dict } from "@/content"
 import type { Locale } from "@/lib/i18n"
+import type { SearchEntry } from "@/lib/search"
 import { SparkMark, Wordmark } from "./illustrations"
 import { LangSwitch } from "./lang-switch"
 import { MobileNav } from "./mobile-nav"
+import { SiteSearch } from "./site-search"
 
 export const navLinks = (lang: Locale, t: Dict["nav"]) => [
   { href: `/${lang}/services`, label: t.services },
   { href: `/${lang}/projects`, label: t.projects },
   { href: `/${lang}#process`, label: t.process },
   { href: `/${lang}#catalogue`, label: t.catalogue },
-  { href: `/${lang}/pay`, label: t.pay },
   { href: `/${lang}/contact`, label: t.contact },
 ]
 
@@ -33,11 +34,21 @@ export function Logo({ lang, label }: { lang: Locale; label: string }) {
   )
 }
 
-export function Header({ lang, t }: { lang: Locale; t: Dict["nav"] }) {
+export function Header({
+  lang,
+  t,
+  search,
+  searchIndex,
+}: {
+  lang: Locale
+  t: Dict["nav"]
+  search: Dict["search"]
+  searchIndex: SearchEntry[]
+}) {
   const links = navLinks(lang, t)
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border bg-ink/75 backdrop-blur-md">
-      <div className="wrap flex h-18 items-center justify-between gap-4">
+      <div className="wrap flex h-18 items-center justify-between gap-3">
         <Logo lang={lang} label={t.home} />
         <nav aria-label={t.primary} className="hidden xl:block">
           <ul className="flex items-center gap-1">
@@ -54,6 +65,7 @@ export function Header({ lang, t }: { lang: Locale; t: Dict["nav"] }) {
           </ul>
         </nav>
         <div className="flex items-center gap-2">
+          <SiteSearch t={search} index={searchIndex} />
           <LangSwitch lang={lang} label={t.switchLabel} text={t.switchTo} />
           <Link
             href={`/${lang}/contact`}

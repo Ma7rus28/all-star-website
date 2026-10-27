@@ -1,7 +1,7 @@
 # All Star Productions — website
 
-Bilingual (English / Arabic, right-to-left) marketing site with a quote form, a
-card payment page (Moyasar) and the legal pages. Next.js 16, Tailwind 4, shadcn/ui.
+Bilingual (English / Arabic, right-to-left) marketing site with a quote form, site
+search, a WhatsApp button and the legal pages. Next.js 16, Tailwind 4, shadcn/ui.
 
 ## Run it
 
@@ -24,19 +24,14 @@ npm run build    # production build
    the host):
    - `FORMS_WEBHOOK_URL` — where quote and data requests are sent. Without it,
      production forms show an error asking visitors to contact you directly.
-   - `MOYASAR_SECRET_KEY` — enables the Pay invoice page. Start with the
-     `sk_test_…` key. Without it the page says online payment is not enabled.
-   - `SITE_URL` — the public address, used for payment return links.
+   - `SITE_URL` — the public address, used for canonical links and the sitemap.
 5. **Photos** — the site uses original line illustrations only. Add real project
    photos you own (with alt text) when you have them.
 
-## How payment works
+## Payments
 
-`/pay` takes a quote or invoice reference and an amount, the server creates a
-Moyasar invoice and redirects the customer to Moyasar's hosted page. Card details
-never touch this site. On return, `/pay/result` asks Moyasar for the invoice
-status server-side, so the result cannot be faked from the URL. There is no
-webhook yet: reconcile payments in the Moyasar dashboard.
+There is no online payment. Clients pay by bank transfer against the quote;
+old `/pay` links redirect to the quote page (see `next.config.ts`).
 
 ## Compliance checklist
 
@@ -46,9 +41,9 @@ webhook yet: reconcile payments in the Moyasar dashboard.
 | 5 | Cookie consent banner | `components/site/cookie-consent.tsx`; reopen from the footer |
 | 6 | Form consents | Unticked required consent on the quote form; separate optional marketing opt-in |
 | 7 | No unnecessary data | Only name, email, service and message are required |
-| 8 | Third-party SDKs | None loaded in the browser. Fonts are self-hosted. Moyasar is called server-side only |
+| 8 | Third-party SDKs | None loaded in the browser apart from Vercel Web Analytics after consent. Fonts are self-hosted |
 | 9 | No dark patterns | Accept and reject buttons are identical; nothing pre-ticked |
-| 10 | No hidden fees | Pricing section, terms and pay page state that nothing is added to the quote |
+| 10 | No hidden fees | Pricing section and terms state that nothing is added to the quote |
 | 11 | No fake reviews | The site has no testimonials. Add only real, attributable ones |
 | 12 | No unsupported claims | No client logos, statistics or awards. Add only what you can evidence |
 | 13 | Alt text | Illustrations carry localized labels; decorative graphics are hidden from screen readers |

@@ -31,7 +31,6 @@ export const indexablePaths = [
   "/contact",
   ...landings.map((l) => `/riyadh/${l.slug}`),
   ...products.map((p) => `/products/${p.slug}`),
-  "/pay",
   "/privacy",
   "/terms",
   "/refund-policy",

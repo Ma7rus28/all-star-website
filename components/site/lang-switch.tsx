@@ -24,10 +24,11 @@ export function LangSwitch({
       hrefLang={other}
       lang={other}
       aria-label={label}
-      className="inline-flex min-h-11 items-center gap-2 rounded-full border border-border px-4 text-sm font-semibold whitespace-nowrap transition-colors hover:bg-white/10"
+      className="inline-flex min-h-11 items-center gap-2 rounded-full border border-border px-3.5 text-sm font-semibold whitespace-nowrap sm:px-4 transition-colors hover:bg-white/10"
     >
       <Languages aria-hidden="true" className="size-4" />
-      {text}
+      <span className="hidden sm:inline">{text}</span>
+      <span aria-hidden="true" className="sm:hidden">{other === "ar" ? "ع" : "EN"}</span>
     </Link>
   )
 }

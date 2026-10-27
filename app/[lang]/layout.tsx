@@ -11,7 +11,9 @@ import { ConsentedAnalytics, CookieConsent } from "@/components/site/cookie-cons
 import { Footer } from "@/components/site/footer"
 import { Header } from "@/components/site/header"
 import { Providers } from "@/components/site/providers"
+import { WhatsAppButton } from "@/components/site/whatsapp-button"
 import { dirOf, hasLocale, locales } from "@/lib/i18n"
+import { buildSearchIndex } from "@/lib/search"
 import { businessJsonLd, pageMeta, siteUrl } from "@/lib/seo"
 import "../globals.css"
 
@@ -77,11 +79,12 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           {dict.nav.skip}
         </a>
         <Providers dir={dir}>
-          <Header lang={lang} t={dict.nav} />
+          <Header lang={lang} t={dict.nav} search={dict.search} searchIndex={buildSearchIndex(lang)} />
           <main id="main" tabIndex={-1} className="flex-1 outline-none">
             {children}
           </main>
           <Footer lang={lang} dict={dict} />
+          <WhatsAppButton t={dict.whatsapp} />
           <CookieConsent lang={lang} t={dict.cookie} />
           <ConsentedAnalytics />
         </Providers>

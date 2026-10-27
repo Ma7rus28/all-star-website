@@ -105,7 +105,7 @@ export function Pricing({ t }: { t: Dict["pricing"] }) {
 
 export function Faq({ t }: { t: Dict["faq"] }) {
   return (
-    <section className="paper py-24 md:py-32">
+    <section id="faq" className="paper py-24 md:py-32">
       <div className="wrap grid gap-10 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <SectionHead eyebrow={t.eyebrow} title={t.title} />
         <Accordion type="single" collapsible className="border-t border-border">
@@ -138,9 +138,6 @@ export function CtaBand({ t, lang }: { t: Dict["cta"]; lang: Locale }) {
             <Link href={`/${lang}/contact`} className="btn btn-gold">
               {t.button}
               <ArrowRight aria-hidden="true" className="size-5 rtl:rotate-180" />
-            </Link>
-            <Link href={`/${lang}/pay`} className="btn btn-line">
-              {t.alt}
             </Link>
           </div>
         </Reveal>

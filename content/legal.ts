@@ -32,7 +32,6 @@ const en: Record<LegalSlug, LegalDoc> = {
         h: "What we collect, and why",
         ul: [
           "Quote form: your name, email, the service you need and your message; optionally your company, phone, city and project date. We use these only to reply to your enquiry and prepare a quote.",
-          "Online payment: the quote or invoice reference and the amount. Card details are entered on our payment provider's page and never reach us.",
           "Data requests: your email and the request you make, so we can find your records and act on it.",
           "Cookie choice: your consent decision, stored in your browser.",
         ],
@@ -53,7 +52,6 @@ const en: Record<LegalSlug, LegalDoc> = {
       {
         h: "Who we share data with",
         ul: [
-          "Moyasar, our payment provider, to process card payments.",
           "Our website hosting and email providers, who store data on our behalf.",
           "Venues, organisers or subcontractors, only where a project you have approved requires it.",
           "Authorities, where the law requires it.",
@@ -121,7 +119,7 @@ const en: Record<LegalSlug, LegalDoc> = {
       },
       {
         h: "Payment",
-        p: ["Payment stages are stated on your quote. You can pay by bank transfer or by card through the Pay invoice page, which uses Moyasar. Cancellations and refunds are covered by our Refund Policy."],
+        p: ["Payment stages are stated on your quote. Payment is by bank transfer to the account named on our invoice. Cancellations and refunds are covered by our Refund Policy."],
       },
       {
         h: "Intellectual property",
@@ -165,7 +163,7 @@ const en: Record<LegalSlug, LegalDoc> = {
       },
       {
         h: "How refunds are paid",
-        p: ["Refunds go back to the original payment method. Card refunds are issued through Moyasar and usually reach your account within 7 to 14 working days, depending on your bank. We do not charge a fee for processing a refund."],
+        p: ["Refunds are paid by bank transfer to the account you paid from, usually within 7 to 14 working days of being confirmed. We do not charge a fee for processing a refund."],
       },
       { h: "How to ask", p: [`Email ${site.email} with your quote or invoice reference. We confirm the refund amount in writing before it is issued.`] },
     ],
@@ -178,9 +176,8 @@ const en: Record<LegalSlug, LegalDoc> = {
         h: "Strictly necessary",
         ul: [
           "asp-consent (local storage): remembers your cookie choice so we do not ask on every visit. Kept until you clear it or change your choice.",
-          "asp_inv (cookie): set only when you start a card payment, so we can show you the result when you return from the payment page. Deleted after 2 hours.",
         ],
-        p: ["These do not track you and cannot be switched off, because the site needs them to work."],
+        p: ["This does not track you and cannot be switched off, because the site needs them to work."],
       },
       {
         h: "Analytics (optional)",
@@ -192,7 +189,7 @@ const en: Record<LegalSlug, LegalDoc> = {
       },
       {
         h: "Third parties",
-        p: ["When you choose to pay by card you leave this site for Moyasar's payment page, which sets its own cookies under its own policy."],
+        p: ["If you follow a link to WhatsApp or another website, that site sets its own cookies under its own policy."],
       },
       {
         h: "Changing your choice",
@@ -216,7 +213,6 @@ const ar: Record<LegalSlug, LegalDoc> = {
         h: "ما الذي نجمعه ولماذا",
         ul: [
           "نموذج عرض السعر: الاسم والبريد الإلكتروني والخدمة المطلوبة ونص الرسالة، واختيارياً الشركة والهاتف والمدينة وتاريخ المشروع. نستخدمها فقط للرد على استفسارك وإعداد عرض السعر.",
-          "الدفع الإلكتروني: رقم عرض السعر أو الفاتورة والمبلغ. بيانات البطاقة تُدخل في صفحة مزوّد الدفع ولا تصل إلينا.",
           "طلبات البيانات: بريدك الإلكتروني ونوع الطلب، لنعثر على سجلاتك وننفّذ الطلب.",
           "اختيار ملفات تعريف الارتباط: قرار موافقتك، ويُحفظ في متصفحك.",
         ],
@@ -233,7 +229,6 @@ const ar: Record<LegalSlug, LegalDoc> = {
       {
         h: "مع من نشارك البيانات",
         ul: [
-          "«ميسّر»، مزوّد خدمة الدفع، لمعالجة مدفوعات البطاقات.",
           "مزوّدو استضافة الموقع والبريد الإلكتروني الذين يخزّنون البيانات نيابةً عنا.",
           "المواقع أو الجهات المنظِّمة أو المقاولون من الباطن، فقط حين يتطلب ذلك مشروع وافقت عليه.",
           "الجهات الرسمية، متى أوجب النظام ذلك.",
@@ -287,7 +282,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
           "استخراج تصاريح الموقع أو الجهة المنظِّمة، ما لم ينص العرض على أننا نتولى ذلك.",
         ],
       },
-      { h: "السداد", p: ["مراحل السداد موضّحة في عرض السعر. يمكنك الدفع بالتحويل البنكي أو بالبطاقة من صفحة سداد فاتورة التي تعمل عبر «ميسّر». الإلغاء والاسترداد تحكمهما سياسة الاسترداد."] },
+      { h: "السداد", p: ["مراحل السداد موضّحة في عرض السعر. يتم السداد بالتحويل البنكي إلى الحساب المذكور في فاتورتنا. الإلغاء والاسترداد تحكمهما سياسة الاسترداد."] },
       { h: "الملكية الفكرية", p: ["التصاميم والرسومات والمجسمات التي ننتجها تبقى ملكاً لنا حتى سداد الفاتورة المتعلقة بها كاملة، ولا يجوز تسليمها لمورّد آخر لتنفيذها قبل ذلك. علاماتك التجارية ومحتواك يبقيان ملكاً لك."] },
       { h: "المسؤولية", p: ["نلتزم بتنفيذ العمل بالعناية والمهارة المعقولتين. لا يحدّ أي بند في هذه الشروط من حقوقك التي تكفلها أنظمة المملكة ولا يجوز استبعادها. وفيما عدا ذلك تقتصر مسؤوليتنا عن أي مشروع على المبلغ الذي دفعته عنه، ولا نتحمل مسؤولية التأخير الناتج عن ظروف خارجة عن إرادتنا المعقولة."] },
       { h: "النظام الواجب التطبيق", p: ["تخضع هذه الشروط لأنظمة المملكة العربية السعودية، وتختص محاكمها بالنظر في أي نزاع."] },
@@ -309,7 +304,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
       { h: "المنتجات المصنوعة حسب الطلب", p: ["المطبوعات والمنتجات التي تحمل علامتك والمصنوعة بمقاسات خاصة تُنتج وفق مواصفاتك ولا يمكن إرجاعها أو إعادة بيعها، ولذلك فهي مستثناة من حق الإلغاء العام الذي يسري على السلع القياسية المشتراة إلكترونياً."] },
       { h: "إذا كان هناك خلل", p: ["إذا كان ما سلّمناه معيباً أو غير مطابق للعرض والتصميم المعتمدين فأبلغنا خلال 7 أيام من التسليم مع صور. سنصلحه أو نعيد إنتاجه على نفقتنا، أو نعيد قيمة البند المتأثر إن تعذّر ذلك."] },
       { h: "إذا ألغينا نحن", p: ["إذا تعذّر علينا تنفيذ طلب مؤكد فإننا نعيد كل ما دفعته عن الجزء غير المنفّذ."] },
-      { h: "طريقة ردّ المبالغ", p: ["تُعاد المبالغ إلى وسيلة الدفع الأصلية. استرداد مدفوعات البطاقات يتم عبر «ميسّر» ويصل إلى حسابك عادةً خلال 7 إلى 14 يوم عمل بحسب البنك. لا نتقاضى أي رسوم على معالجة الاسترداد."] },
+      { h: "طريقة ردّ المبالغ", p: ["تُعاد المبالغ بالتحويل البنكي إلى الحساب الذي دفعت منه، عادةً خلال 7 إلى 14 يوم عمل من تأكيدها. لا نتقاضى أي رسوم على معالجة الاسترداد."] },
       { h: "كيف تطلب الاسترداد", p: [`راسلنا على ${site.email} مع رقم عرض السعر أو الفاتورة. نؤكد لك مبلغ الاسترداد كتابياً قبل صرفه.`] },
     ],
   },
@@ -321,13 +316,12 @@ const ar: Record<LegalSlug, LegalDoc> = {
         h: "الضرورية",
         ul: [
           "asp-consent (تخزين محلي): يحفظ اختيارك لملفات تعريف الارتباط حتى لا نسألك في كل زيارة. يبقى حتى تمسحه أو تغيّر اختيارك.",
-          "asp_inv (ملف تعريف ارتباط): يُنشأ فقط عند بدء دفع بالبطاقة، لنعرض لك النتيجة عند عودتك من صفحة الدفع. يُحذف بعد ساعتين.",
         ],
-        p: ["هذه العناصر لا تتتبّعك ولا يمكن إيقافها لأن الموقع يحتاج إليها ليعمل."],
+        p: ["هذا العنصر لا يتتبّعك ولا يمكن إيقافه لأن الموقع يحتاج إليها ليعمل."],
       },
       { h: "التحليلات (اختيارية)", p: ["نستخدم Vercel Web Analytics لإحصاء زيارات الصفحات ومعرفة الصفحات المفيدة. لا تضع هذه الأداة ملفات تعريف ارتباط، ولا تحفظ عنوان IP الخاص بك، ولا تتتبّعك في المواقع الأخرى. وهي متوقفة افتراضياً ولا تعمل إلا إذا اخترت «قبول الكل» أو فعّلتها من إعدادات ملفات تعريف الارتباط."] },
       { h: "الإعلانات والتتبّع", p: ["لا نستخدم ملفات ارتباط إعلانية ولا بكسلات تتبّع ولا أدوات تتبّع لوسائل التواصل الاجتماعي. الخطوط تُحمَّل من نطاق موقعنا، فلا يتصل تحميل الصفحة بمزوّد خطوط."] },
-      { h: "الأطراف الأخرى", p: ["عند اختيارك الدفع بالبطاقة تنتقل من هذا الموقع إلى صفحة الدفع لدى «ميسّر»، التي تضع ملفات ارتباط خاصة بها وفق سياستها."] },
+      { h: "الأطراف الأخرى", p: ["إذا انتقلت عبر رابط إلى واتساب أو موقع آخر، فإن ذلك الموقع يضع ملفات ارتباط خاصة به وفق سياسته."] },
       { h: "تغيير اختيارك", p: ["استخدم رابط «إعدادات ملفات تعريف الارتباط» أسفل الصفحة في أي وقت. رفض الملفات الاختيارية يتم بنقرة واحدة ولا يحدّ مما يمكنك فعله في الموقع."] },
     ],
   },
