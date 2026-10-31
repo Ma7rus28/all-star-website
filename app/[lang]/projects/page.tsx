@@ -61,6 +61,8 @@ export default async function Projects({ params }: PageProps<"/[lang]/projects">
         {projects.map((p) => {
           const c = p[lang]
           const portrait = p.media.height > p.media.width
+          // Panoramic photos run across the whole card, with the text underneath.
+          const wide = p.media.width / p.media.height >= 2.4
           const related = p.link && linkLabel(p.link, lang)
           return (
             <article
@@ -68,11 +70,15 @@ export default async function Projects({ params }: PageProps<"/[lang]/projects">
               id={p.slug}
               aria-labelledby={`${p.slug}-title`}
               className={`grid gap-8 rounded-3xl border border-border bg-card p-5 md:items-center md:gap-14 md:p-10 ${
-                portrait ? "md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]" : "md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]"
+                wide
+                  ? ""
+                  : portrait
+                    ? "md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]"
+                    : "md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]"
               }`}
             >
               <ProjectMedia project={p} title={c.title} alt={c.alt} videoLabel={t.video} portrait={portrait} />
-              <div>
+              <div className={wide ? "max-w-3xl" : undefined}>
                 {c.location && (
                   <p className="eyebrow mb-4">
                     <MapPin aria-hidden="true" className="size-4" />
@@ -140,7 +146,11 @@ function ProjectMedia({
           alt={alt ?? title}
           width={m.width}
           height={m.height}
-          sizes="(min-width: 1280px) 680px, (min-width: 768px) 56vw, 100vw"
+          sizes={
+            m.width / m.height >= 2.4
+              ? "(min-width: 1280px) 1200px, 100vw"
+              : "(min-width: 1280px) 680px, (min-width: 768px) 56vw, 100vw"
+          }
           className="h-auto w-full"
         />
       </div>

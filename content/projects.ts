@@ -86,7 +86,7 @@ export const projects: Project[] = [
   },
   {
     slug: "isuzu-3d-letter-signs",
-    media: { kind: "photo", src: "/images/projects/isuzu-3d-letter-signs.jpg", width: 1600, height: 782 },
+    media: { kind: "photo", src: "/images/projects/isuzu-3d-letter-signs.jpg", width: 1600, height: 492 },
     link: "/products/3d-led-letter-signage",
     en: {
       title: "ISUZU 3D letter signs",
