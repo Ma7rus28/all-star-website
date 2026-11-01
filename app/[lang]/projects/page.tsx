@@ -6,7 +6,7 @@ import { ArrowRight, Check, MapPin } from "lucide-react"
 import { getDict } from "@/content"
 import { getLanding } from "@/content/landings"
 import { getProduct } from "@/content/products"
-import { projects, type Project } from "@/content/projects"
+import { isPanoramic, projects, type Project } from "@/content/projects"
 import { PageHead } from "@/components/site/sections"
 import { hasLocale, type Locale } from "@/lib/i18n"
 import { pageMeta, siteUrl } from "@/lib/seo"
@@ -17,6 +17,9 @@ function linkLabel(link: string, lang: Locale) {
   if (section === "products") return getProduct(slug)?.[lang].h1
   if (section === "riyadh") return getLanding(slug)?.[lang].h1
 }
+
+// Saudi time, so Google is not left to guess the time zone of a date-only value.
+const uploadDate = (date: string) => `${date}T00:00:00+03:00`
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/projects">): Promise<Metadata> {
   const { lang } = await params
@@ -41,7 +44,7 @@ export default async function Projects({ params }: PageProps<"/[lang]/projects">
             description: p[lang].summary,
             thumbnailUrl: `${siteUrl}${m.poster}`,
             contentUrl: `${siteUrl}${m.src}`,
-            uploadDate: m.uploaded,
+            uploadDate: uploadDate(m.uploaded),
             duration: `PT${m.durationSeconds}S`,
             inLanguage: lang,
             publisher: { "@id": `${siteUrl}/#business` },
@@ -62,8 +65,7 @@ export default async function Projects({ params }: PageProps<"/[lang]/projects">
           const c = p[lang]
           const portrait = p.media.height > p.media.width
           // Panoramic photos run across the whole card, with the text underneath.
-          const wide = p.media.width / p.media.height >= 2.4
-          const related = p.link && linkLabel(p.link, lang)
+          const wide = isPanoramic(p.media)
           return (
             <article
               key={p.slug}
@@ -98,14 +100,20 @@ export default async function Projects({ params }: PageProps<"/[lang]/projects">
                     </li>
                   ))}
                 </ul>
-                {p.link && related && (
-                  <Link
-                    href={`/${lang}${p.link}`}
-                    className="mt-8 inline-flex items-center gap-2 font-semibold text-gold underline-offset-4 hover:underline"
-                  >
-                    {related}
-                    <ArrowRight aria-hidden="true" className="size-4 rtl:rotate-180" />
-                  </Link>
+                {p.links && (
+                  <ul className="mt-8 grid gap-3">
+                    {p.links.map((link) => (
+                      <li key={link}>
+                        <Link
+                          href={`/${lang}${link}`}
+                          className="inline-flex items-center gap-2 font-semibold text-gold underline-offset-4 hover:underline"
+                        >
+                          {linkLabel(link, lang)}
+                          <ArrowRight aria-hidden="true" className="size-4 shrink-0 rtl:rotate-180" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
             </article>
@@ -147,7 +155,7 @@ function ProjectMedia({
           width={m.width}
           height={m.height}
           sizes={
-            m.width / m.height >= 2.4
+            isPanoramic(m)
               ? "(min-width: 1280px) 1200px, 100vw"
               : "(min-width: 1280px) 680px, (min-width: 768px) 56vw, 100vw"
           }

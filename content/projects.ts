@@ -27,8 +27,12 @@ export type ProjectMedia =
 export type Project = {
   slug: string
   media: ProjectMedia
-  /** Related service or product page, as a path after /{lang}. */
-  link?: string
+  /**
+   * Service and product pages this job is proof for, as paths after /{lang}, closest match
+   * first. Those pages show the project and its card links back. Only list a page whose
+   * service the job really included.
+   */
+  links?: string[]
   en: ProjectCopy
   ar: ProjectCopy
 }
@@ -45,7 +49,12 @@ export const projects: Project[] = [
       uploaded: "2026-10-24",
       durationSeconds: 33,
     },
-    link: "/riyadh/event-management-company",
+    links: [
+      "/riyadh/event-management-company",
+      "/products/acrylic-fabrication",
+      "/products/event-giveaways-lanyards",
+      "/riyadh/advertising-signage-printing",
+    ],
     en: {
       title: "Riyadh Season concert",
       location: "Riyadh",
@@ -70,7 +79,7 @@ export const projects: Project[] = [
       uploaded: "2026-10-27",
       durationSeconds: 10,
     },
-    link: "/riyadh/event-management-company",
+    links: ["/riyadh/event-management-company"],
     en: {
       title: "Haier product launch event",
       location: "Granada Mall, Riyadh",
@@ -87,7 +96,7 @@ export const projects: Project[] = [
   {
     slug: "isuzu-3d-letter-signs",
     media: { kind: "photo", src: "/images/projects/isuzu-3d-letter-signs.jpg", width: 1600, height: 492 },
-    link: "/products/3d-led-letter-signage",
+    links: ["/products/3d-led-letter-signage", "/riyadh/advertising-signage-printing"],
     en: {
       title: "ISUZU 3D letter signs",
       summary: "Red 3D letter signs with the ISUZU name in English and Arabic, built on white backing panels and wired for lighting, ready to go out for installation.",
@@ -102,3 +111,12 @@ export const projects: Project[] = [
     },
   },
 ]
+
+/** Projects to show on a service or product page, given its path after /{lang}; closest match first. */
+export function projectsFor(path: string) {
+  const rank = (p: Project) => p.links?.indexOf(path) ?? -1
+  return projects.filter((p) => rank(p) >= 0).sort((a, b) => rank(a) - rank(b))
+}
+
+/** Very wide photos are shown at their own shape, not cropped to the usual frame. */
+export const isPanoramic = (m: ProjectMedia) => m.width / m.height >= 2.4

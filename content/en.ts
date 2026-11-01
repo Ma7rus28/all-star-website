@@ -332,6 +332,8 @@ export const en = {
     video: "Project video",
     cta: "Planning something similar?",
     ctaButton: "Request a quote",
+    related: "Related projects",
+    viewProject: "See the project",
   },
   riyadh: {
     footerTitle: "In Riyadh",

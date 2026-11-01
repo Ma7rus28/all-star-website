@@ -334,6 +334,8 @@ export const ar: Dict = {
     video: "فيديو المشروع",
     cta: "تخطط لشيء مشابه؟",
     ctaButton: "اطلب عرض سعر",
+    related: "مشاريع ذات صلة",
+    viewProject: "شاهد المشروع",
   },
   riyadh: {
     footerTitle: "في الرياض",

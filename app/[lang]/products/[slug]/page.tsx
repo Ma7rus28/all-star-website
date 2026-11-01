@@ -5,6 +5,7 @@ import { ArrowRight, Check } from "lucide-react"
 import { getDict } from "@/content"
 import { getProduct, products } from "@/content/products"
 import { ProductVisual } from "@/components/site/product-visual"
+import { RelatedProjects } from "@/components/site/related-projects"
 import { CtaBand } from "@/components/site/sections"
 import { hasLocale, locales } from "@/lib/i18n"
 import { pageMeta, siteUrl } from "@/lib/seo"
@@ -149,6 +150,8 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
         </section>
         <p className="text-lg text-muted-foreground md:col-span-2">{t.catalogue.area}</p>
       </div>
+
+      <RelatedProjects path={`/products/${slug}`} lang={lang} t={t.projectsPage} />
 
       {related.length > 0 && (
         <section aria-labelledby="related" className="paper border-t border-border py-16 md:py-24">

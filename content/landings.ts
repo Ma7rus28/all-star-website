@@ -112,8 +112,8 @@ export const landings: Landing[] = [
     productCats: ["display", "print"],
     quoteService: "stand",
     en: {
-      title: "Exhibition Stand Builders in Riyadh | Stand Design & Build",
-      description: "Exhibition stand builders in Riyadh: custom stand design with 3D visuals, fabrication, graphics, lighting, installation and dismantling for trade shows.",
+      title: "Exhibition Planner & Stand Builders in Riyadh",
+      description: "Exhibition planner and stand builders in Riyadh: custom stand design with 3D visuals, fabrication, graphics, lighting, installation and dismantling.",
       h1: "Exhibition stand design and build in Riyadh",
       intro: [
         "We design, build, install and dismantle exhibition stands for companies showing at trade fairs and conferences in Riyadh, from shell-scheme upgrades to custom double-deck stands and country pavilions.",
@@ -135,6 +135,7 @@ export const landings: Landing[] = [
       areaTitle: "Where we build",
       area: "Planning a show at the Riyadh Front Exhibition & Conference Center, the Riyadh International Convention & Exhibition Center or a hotel ballroom? Tell us the venue, hall and stand number and we will work to the organiser's rules and build-up times.",
       faq: [
+        { q: "Are you an exhibition planner or a stand builder?", a: "Both, for your part of the show. We plan the stand layout, graphics, deadlines and build-up with you, then design, build, install and dismantle it. Country and group pavilions are planned the same way." },
         { q: "Do you design the stand or only build it?", a: "Both. We can design the stand from your brief with 3D visuals, or build a design you already have." },
         { q: "What size of stand can you build?", a: "From small shell-scheme upgrades to large custom and double-deck space-only stands and pavilions. Send the stand size and the show rules and we will confirm what is possible." },
         { q: "Do you handle organiser approvals and build-up?", a: "We prepare the drawings organisers usually ask for and manage build-up and dismantling on site. Tell us the show so we can check its deadlines and rules." },
@@ -142,8 +143,8 @@ export const landings: Landing[] = [
       ],
     },
     ar: {
-      title: "تصميم وتنفيذ أجنحة المعارض في الرياض | أول ستار للإنتاج",
-      description: "تصميم وتنفيذ أجنحة المعارض في الرياض: تصميم خاص بمجسمات ثلاثية الأبعاد، تصنيع، جرافيك، إضاءة، تركيب وفكّ للمعارض التجارية والأجنحة الوطنية في السعودية.",
+      title: "تنظيم معارض وتصميم وتنفيذ أجنحة المعارض في الرياض",
+      description: "تنظيم معارض وتصميم وتنفيذ أجنحة المعارض في الرياض: تصميم خاص بمجسمات ثلاثية الأبعاد، تصنيع، جرافيك، إضاءة، تركيب وفكّ للمعارض التجارية والأجنحة الوطنية.",
       h1: "تصميم وتنفيذ أجنحة المعارض في الرياض",
       intro: [
         "نصمّم أجنحة المعارض ونصنّعها ونركّبها ونفكّها للشركات المشاركة في المعارض التجارية والمؤتمرات في الرياض، من تطوير الأجنحة الجاهزة إلى الأجنحة الخاصة بطابقين والأجنحة الوطنية.",
@@ -165,6 +166,7 @@ export const landings: Landing[] = [
       areaTitle: "أين ننفّذ",
       area: "تشارك في معرض بمركز الرياض للمعارض والمؤتمرات (واجهة الرياض) أو مركز الرياض الدولي للمؤتمرات والمعارض أو قاعة فندق؟ أخبرنا بالموقع والقاعة ورقم الجناح، ونعمل وفق اشتراطات المنظّم ومواعيد التركيب.",
       faq: [
+        { q: "هل تتولون تنظيم المعارض أم تنفيذ الأجنحة فقط؟", a: "الاثنان فيما يخص مشاركتك في المعرض. نخطّط معك لمخطط الجناح والجرافيك والمواعيد والتركيب، ثم نصمّم الجناح وننفّذه ونركّبه ونفكّه. والأجنحة الوطنية والمشتركة تُنظَّم بالطريقة نفسها." },
         { q: "هل تصمّمون الجناح أم تنفّذونه فقط؟", a: "الاثنان. نصمّم الجناح من طلبك بمجسمات ثلاثية الأبعاد، أو ننفّذ تصميماً جاهزاً لديك." },
         { q: "ما حجم الأجنحة التي تنفّذونها؟", a: "من تطوير الأجنحة الجاهزة الصغيرة إلى الأجنحة الخاصة الكبيرة والأجنحة بطابقين والأجنحة الوطنية. أرسل مساحة الجناح واشتراطات المعرض ونؤكد لك الممكن." },
         { q: "هل تتولون موافقات المنظّم والتركيب؟", a: "نجهّز المخططات التي يطلبها المنظّمون عادة، وندير التركيب والفكّ في الموقع. أخبرنا باسم المعرض لنراجع مواعيده واشتراطاته." },
@@ -178,11 +180,11 @@ export const landings: Landing[] = [
     productCats: ["signage", "outdoor", "print"],
     quoteService: "advertising",
     en: {
-      title: "Advertising, Signage & Printing Company in Riyadh",
-      description: "Advertising and signage company in Riyadh: shop signs, 3D LED letters, light boxes, banners, stickers, vehicle wraps, flags and building wraps, installed.",
+      title: "Advertising Agency & Signage Company in Riyadh",
+      description: "Advertising agency and signage company in Riyadh: shop signs, 3D LED letters, light boxes, banners, stickers, vehicle wraps and building wraps, installed.",
       h1: "Advertising, signage and printing in Riyadh",
       intro: [
-        "We produce and install the advertising that puts a brand on Riyadh's streets: shop-front signs and 3D LED letters, light boxes, large-format banners, building and hoarding wraps, vehicle wraps and flags.",
+        "All Star Productions is an advertising agency and signage company in Riyadh. We produce and install the advertising that puts a brand on the city's streets: shop-front signs and 3D LED letters, light boxes, large-format banners, building and hoarding wraps, vehicle wraps and flags.",
         "Artwork, printing, fabrication and installation are handled by one team, and our installers fit signs and graphics on site across the city.",
       ],
       servicesTitle: "Advertising services in Riyadh",
@@ -217,7 +219,7 @@ export const landings: Landing[] = [
       ],
       servicesTitle: "خدمات الدعاية والإعلان في الرياض",
       services: [
-        "لوحات واجهات المحلات والحروف البارزة المضيئة",
+        "لوحات محلات وواجهات وحروف بارزة مضيئة",
         "الصناديق المضيئة واللوحات المعلّقة ونيون LED",
         "طباعة البنرات والخلفيات بالمقاسات الكبيرة",
         "تغليف المباني وأسوار المشاريع وملصقات النوافذ",

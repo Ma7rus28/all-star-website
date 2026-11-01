@@ -21,7 +21,7 @@ export const siteUrl = (
 ).replace(/\/$/, "")
 
 /** Date of the last content change on the site (not the legal pages). Update it with each content release; the sitemap shows it to search engines. */
-export const contentUpdated = "2026-10-27"
+export const contentUpdated = "2026-11-01"
 
 /** Every indexable page, without the language prefix. */
 export const indexablePaths = [
@@ -82,7 +82,7 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
     description,
     url: `${siteUrl}/${lang}`,
     logo: `${siteUrl}/logo-mark.svg`,
-    image: `${siteUrl}/images/work/stand.webp`,
+    image: `${siteUrl}/images/projects/haier-product-launch.jpg`,
     telephone: site.phone,
     email: site.email,
     vatID: site.vat,

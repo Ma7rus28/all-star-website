@@ -1,9 +1,32 @@
 import type { MetadataRoute } from "next"
-import { legalSlugs, locales } from "@/lib/i18n"
+import { projects } from "@/content/projects"
+import { legalSlugs, locales, type Locale } from "@/lib/i18n"
 import { contentUpdated, indexablePaths, siteUrl } from "@/lib/seo"
 import { site } from "@/lib/site"
 
 const legalPaths = new Set<string>([...legalSlugs.map((s) => `/${s}`), "/data-request"])
+
+// Next.js writes video text into the XML as it is, so an "&" in a title would break the sitemap.
+const xmlText = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+
+// The Projects page's videos and photos, so Google can find them without playing the page.
+const projectMedia = (lang: Locale) => ({
+  images: projects.map(({ media: m }) => `${siteUrl}${m.kind === "video" ? m.poster : m.src}`),
+  videos: projects.flatMap(({ media: m, ...p }) =>
+    m.kind === "video"
+      ? [
+          {
+            title: xmlText(p[lang].title),
+            description: xmlText(p[lang].summary),
+            thumbnail_loc: `${siteUrl}${m.poster}`,
+            content_loc: `${siteUrl}${m.src}`,
+            duration: m.durationSeconds,
+            publication_date: `${m.uploaded}T00:00:00+03:00`,
+          },
+        ]
+      : [],
+  ),
+})
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return indexablePaths.flatMap((path) =>
@@ -19,6 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           "x-default": `${siteUrl}/en${path}`,
         },
       },
+      ...(path === "/projects" && projectMedia(lang)),
     }))
   )
 }

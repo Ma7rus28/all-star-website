@@ -6,6 +6,7 @@ import { ArrowRight, Check } from "lucide-react"
 import { getDict } from "@/content"
 import { getLanding, landings } from "@/content/landings"
 import { products } from "@/content/products"
+import { RelatedProjects } from "@/components/site/related-projects"
 import { CtaBand } from "@/components/site/sections"
 import { hasLocale, locales } from "@/lib/i18n"
 import { pillarPhotos } from "@/lib/photos"
@@ -156,6 +157,8 @@ export default async function RiyadhLanding({ params }: PageProps<"/[lang]/riyad
           <p className="mt-4 max-w-3xl text-lg text-muted-foreground">{c.area}</p>
         </section>
       </div>
+
+      <RelatedProjects path={`/riyadh/${slug}`} lang={lang} t={t.projectsPage} />
 
       {related.length > 0 && (
         <section aria-labelledby="products" className="paper border-y border-border py-16 md:py-24">
