@@ -135,7 +135,7 @@ export const landings: Landing[] = [
       areaTitle: "Where we build",
       area: "Planning a show at the Riyadh Front Exhibition & Conference Center, the Riyadh International Convention & Exhibition Center or a hotel ballroom? Tell us the venue, hall and stand number and we will work to the organiser's rules and build-up times.",
       faq: [
-        { q: "Are you an exhibition planner or a stand builder?", a: "Both, for your part of the show. We plan the stand layout, graphics, deadlines and build-up with you, then design, build, install and dismantle it. Country and group pavilions are planned the same way." },
+        { q: "Are you an exhibition planner or a stand builder?", a: "Both. Most of our exhibition work is stand design and build: we plan the layout, graphics, deadlines and build-up with you, then design, build, install and dismantle the stand. Country and group pavilions are planned the same way. We also organise complete exhibitions; send us the brief and we will scope it with you." },
         { q: "Do you design the stand or only build it?", a: "Both. We can design the stand from your brief with 3D visuals, or build a design you already have." },
         { q: "What size of stand can you build?", a: "From small shell-scheme upgrades to large custom and double-deck space-only stands and pavilions. Send the stand size and the show rules and we will confirm what is possible." },
         { q: "Do you handle organiser approvals and build-up?", a: "We prepare the drawings organisers usually ask for and manage build-up and dismantling on site. Tell us the show so we can check its deadlines and rules." },
@@ -166,7 +166,7 @@ export const landings: Landing[] = [
       areaTitle: "أين ننفّذ",
       area: "تشارك في معرض بمركز الرياض للمعارض والمؤتمرات (واجهة الرياض) أو مركز الرياض الدولي للمؤتمرات والمعارض أو قاعة فندق؟ أخبرنا بالموقع والقاعة ورقم الجناح، ونعمل وفق اشتراطات المنظّم ومواعيد التركيب.",
       faq: [
-        { q: "هل تتولون تنظيم المعارض أم تنفيذ الأجنحة فقط؟", a: "الاثنان فيما يخص مشاركتك في المعرض. نخطّط معك لمخطط الجناح والجرافيك والمواعيد والتركيب، ثم نصمّم الجناح وننفّذه ونركّبه ونفكّه. والأجنحة الوطنية والمشتركة تُنظَّم بالطريقة نفسها." },
+        { q: "هل تتولون تنظيم المعارض أم تنفيذ الأجنحة فقط؟", a: "الاثنان. معظم أعمالنا في المعارض تصميم الأجنحة وتنفيذها: نخطّط معك لمخطط الجناح والجرافيك والمواعيد والتركيب، ثم نصمّم الجناح وننفّذه ونركّبه ونفكّه، والأجنحة الوطنية والمشتركة تُنظَّم بالطريقة نفسها. وننظّم كذلك معارض كاملة؛ أرسل لنا التفاصيل لنحدّد النطاق معك." },
         { q: "هل تصمّمون الجناح أم تنفّذونه فقط؟", a: "الاثنان. نصمّم الجناح من طلبك بمجسمات ثلاثية الأبعاد، أو ننفّذ تصميماً جاهزاً لديك." },
         { q: "ما حجم الأجنحة التي تنفّذونها؟", a: "من تطوير الأجنحة الجاهزة الصغيرة إلى الأجنحة الخاصة الكبيرة والأجنحة بطابقين والأجنحة الوطنية. أرسل مساحة الجناح واشتراطات المعرض ونؤكد لك الممكن." },
         { q: "هل تتولون موافقات المنظّم والتركيب؟", a: "نجهّز المخططات التي يطلبها المنظّمون عادة، وندير التركيب والفكّ في الموقع. أخبرنا باسم المعرض لنراجع مواعيده واشتراطاته." },
