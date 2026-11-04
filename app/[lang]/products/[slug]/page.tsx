@@ -56,7 +56,10 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
       url,
       ...(product.photo && { image: `${siteUrl}${product.photo.src}` }),
       provider: { "@id": `${siteUrl}/#business` },
-      areaServed: { "@type": "Country", name: "Saudi Arabia" },
+      areaServed: [
+        { "@type": "City", name: lang === "ar" ? "الرياض" : "Riyadh" },
+        { "@type": "Country", name: lang === "ar" ? "المملكة العربية السعودية" : "Saudi Arabia" },
+      ],
     },
     {
       "@context": "https://schema.org",
