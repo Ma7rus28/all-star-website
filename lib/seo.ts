@@ -85,7 +85,6 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
     image: `${siteUrl}/images/projects/haier-product-launch.jpg`,
     telephone: site.phone,
     email: site.email,
-    vatID: site.vat,
     address: {
       "@type": "PostalAddress",
       streetAddress: lang === "ar" ? site.streetAr : site.street,

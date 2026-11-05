@@ -96,7 +96,7 @@ const en: Record<LegalSlug, LegalDoc> = {
     description: `Terms for using this website and ordering services from ${c}. A signed quote or contract for a project takes priority where they differ.`,
     intro: `These terms apply when you use this website or order services from ${c}. A signed quote or contract for a specific project takes priority over these terms where they differ.`,
     sections: [
-      { h: "About us", p: [`${site.name}, VAT ${site.vat}, ${site.address}. Contact: ${site.email}, ${site.phone}.`] },
+      { h: "About us", p: [`${site.name}, ${site.address}. Contact: ${site.email}, ${site.phone}.`] },
       {
         h: "Quotes and orders",
         ul: [
@@ -264,7 +264,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
     title: "شروط الخدمة",
     intro: `تسري هذه الشروط عند استخدامك هذا الموقع أو طلبك خدمات من ${cAr}. وعند الاختلاف، تكون الأولوية لعرض السعر الموقّع أو العقد الخاص بالمشروع.`,
     sections: [
-      { h: "من نحن", p: [`${site.name}، الرقم الضريبي ${site.vat}، ${site.addressAr}. للتواصل: ${site.email}، ${site.phone}.`] },
+      { h: "من نحن", p: [`${site.name}، ${site.addressAr}. للتواصل: ${site.email}، ${site.phone}.`] },
       {
         h: "عروض الأسعار والطلبات",
         ul: [

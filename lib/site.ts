@@ -4,7 +4,6 @@
 export const site = {
   name: "All Star Productions",
   nameAr: "أول ستار للإنتاج",
-  vat: "311984630800003",
   // Matches the Google Business Profile exactly (see seo/BRIEF.md). Change both together.
   address: "As Sanabel Street, As Salhiyah, Riyadh 12662, Saudi Arabia",
   addressAr: "شارع السنابل، حي الصالحية، الرياض 12662، المملكة العربية السعودية",

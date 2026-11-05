@@ -78,9 +78,6 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dict }) {
           <address className="mt-5 grid gap-2 text-muted-foreground not-italic">
             <span className="font-medium text-foreground">{site.name}</span>
             <span>{lang === "ar" ? site.addressAr : site.address}</span>
-            <span>
-              {t.vat}: <bdi dir="ltr">{site.vat}</bdi>
-            </span>
             {isSet(site.phone) ? (
               <a href={telHref(site.phone)} className={linkClass}>
                 <bdi dir="ltr">{site.phone}</bdi>
