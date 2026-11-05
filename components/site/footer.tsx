@@ -79,9 +79,6 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dict }) {
             <span className="font-medium text-foreground">{site.name}</span>
             <span>{lang === "ar" ? site.addressAr : site.address}</span>
             <span>
-              {t.cr}: <bdi dir="ltr">{site.cr}</bdi>
-            </span>
-            <span>
               {t.vat}: <bdi dir="ltr">{site.vat}</bdi>
             </span>
             {isSet(site.phone) ? (

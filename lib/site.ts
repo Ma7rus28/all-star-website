@@ -4,7 +4,6 @@
 export const site = {
   name: "All Star Productions",
   nameAr: "أول ستار للإنتاج",
-  cr: "7037719726",
   vat: "311984630800003",
   // Matches the Google Business Profile exactly (see seo/BRIEF.md). Change both together.
   address: "As Sanabel Street, As Salhiyah, Riyadh 12662, Saudi Arabia",
@@ -23,7 +22,7 @@ export const site = {
   privacyEmail: "mahrus0murshed@gmail.com",
   hours: "Sat–Thu, 9:00–21:00 (AST)",
   hoursAr: "السبت – الخميس، 9:00 – 21:00",
-  legalUpdated: "2026-10-27",
+  legalUpdated: "2026-11-05",
 } as const
 
 export const isSet = (value: string) => !value.startsWith("[")

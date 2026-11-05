@@ -24,7 +24,6 @@ export default async function Contact({ params }: PageProps<"/[lang]/contact">) 
 
   const rows: { label: string; value: string; href?: string; ltr?: boolean; more?: { href: string; label: string } }[] = [
     { label: t.legalName, value: site.name },
-    { label: t.cr, value: site.cr, ltr: true },
     { label: t.vat, value: site.vat, ltr: true },
     {
       label: t.address,
