@@ -110,6 +110,23 @@ export const projects: Project[] = [
       alt: "لوحات ISUZU بحروف بارزة حمراء بالإنجليزية والعربية على ألواح بيضاء، محمّلة على شاحنة",
     },
   },
+  {
+    slug: "cat-idea-exhibition-stand",
+    media: { kind: "photo", src: "/images/projects/cat-idea-exhibition-stand.jpg", width: 1600, height: 1200 },
+    links: ["/riyadh/exhibition-stand-builders"],
+    en: {
+      title: "Cat Idea exhibition stand",
+      summary: "A two-bay exhibition stand for Cat Idea's veterinary diets and pet supplements: purple columns and frame, black fascia headers with the logo and stand number, printed back-wall graphics for its product lines, and branded counters at the front.",
+      scope: ["Purple columns and frame", "Fascia headers with logo and stand number", "Printed back-wall graphics", "Branded counters"],
+      alt: "Cat Idea exhibition stand D09 with purple columns, black logo headers, product graphics on the back walls and branded counters",
+    },
+    ar: {
+      title: "جناح كات آيديا في المعرض",
+      summary: "جناح معرض من قسمين لكات آيديا للأغذية البيطرية ومكملات الحيوانات الأليفة: أعمدة وإطار باللون البنفسجي، ولوحات علوية سوداء تحمل الشعار ورقم الجناح، وجرافيك مطبوع على الجدران الخلفية لخطوط منتجاتها، وكاونترات بهوية العلامة في الواجهة.",
+      scope: ["أعمدة وإطار باللون البنفسجي", "لوحات علوية بالشعار ورقم الجناح", "جرافيك مطبوع للجدران الخلفية", "كاونترات بهوية العلامة"],
+      alt: "جناح كات آيديا رقم D09 بأعمدة بنفسجية ولوحات علوية سوداء بالشعار وصور المنتجات على الجدران الخلفية وكاونترات بهوية العلامة",
+    },
+  },
 ]
 
 /** Projects to show on a service or product page, given its path after /{lang}; closest match first. */
