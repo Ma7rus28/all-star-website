@@ -9,7 +9,7 @@ import { RelatedProjects } from "@/components/site/related-projects"
 import { CtaBand } from "@/components/site/sections"
 import { hasLocale, locales } from "@/lib/i18n"
 import { pageMeta, siteUrl } from "@/lib/seo"
-import { site } from "@/lib/site"
+import { isSet, site, waHref } from "@/lib/site"
 
 export const dynamicParams = false
 
@@ -44,7 +44,11 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
     .filter((p, i, all): p is NonNullable<typeof p> => !!p && p.slug !== slug && all.indexOf(p) === i)
     .slice(0, 3)
   const catLabel = t.catalogue.filters.find((f) => f.id === product.cat)?.label
-  const quoteHref = `/${lang}/contact?service=advertising&needs=${encodeURIComponent(c.name)}`
+  // The quote button opens WhatsApp with the product and its page already in the message;
+  // the contact form stays the fallback if no WhatsApp number is set.
+  const quoteHref = isSet(site.whatsapp)
+    ? `${waHref(site.whatsapp)}?text=${encodeURIComponent(`${t.whatsapp.productMessage} ${c.name}.\n${url}`)}`
+    : `/${lang}/contact?service=advertising&needs=${encodeURIComponent(c.name)}`
 
   const jsonLd = [
     {
@@ -103,10 +107,14 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
             <h1 className="mt-6 text-4xl font-extrabold md:text-6xl">{c.h1}</h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">{c.intro}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link href={quoteHref} className="btn btn-gold">
+              <a
+                href={quoteHref}
+                {...(isSet(site.whatsapp) && { target: "_blank", rel: "noopener noreferrer" })}
+                className="btn btn-gold"
+              >
                 {t.catalogue.quoteFor} {c.name}
                 <ArrowRight aria-hidden="true" className="size-5 shrink-0 rtl:rotate-180" />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border bg-muted">

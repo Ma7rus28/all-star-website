@@ -318,6 +318,7 @@ export const en = {
   whatsapp: {
     label: "Chat with us on WhatsApp",
     message: "Hello All Star Productions, I would like a quote.",
+    productMessage: "Hello All Star Productions, I would like a quote for",
   },
   projectsPage: {
     title: "Projects",

@@ -320,6 +320,7 @@ export const ar: Dict = {
   whatsapp: {
     label: "تواصل معنا عبر واتساب",
     message: "مرحباً أول ستار للإنتاج، أرغب في عرض سعر.",
+    productMessage: "مرحباً أول ستار للإنتاج، أرغب في عرض سعر لـ",
   },
   projectsPage: {
     title: "مشاريعنا",
