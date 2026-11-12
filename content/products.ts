@@ -343,6 +343,7 @@ export const products: Product[] = [
   {
     slug: "fabric-light-boxes",
     cat: "display",
+    photo: img("fabric-light-box.webp"),
     related: ["light-box-signage", "roll-up-pop-up-banner-stands", "backdrop-printing-media-walls"],
     en: {
       name: "Fabric light boxes",
