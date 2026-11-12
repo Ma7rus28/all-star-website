@@ -147,6 +147,29 @@ export const projects: Project[] = [
       alt: "تصميم ثلاثي الأبعاد لواجهة نمق قهوة ومحمصة في تبوك، مع مجسمات فلين لمنطاد وسلحفاة وغيوم وفراشات وأكواب قهوة كبيرة ولوحة مضيئة فوق الجلسات الخارجية",
     },
   },
+  {
+    slug: "joint-clinic-van-branding",
+    media: {
+      kind: "video",
+      src: "/videos/joint-clinic-van-branding.mp4",
+      poster: "/images/projects/joint-clinic-van-branding.jpg",
+      width: 720,
+      height: 1280,
+      uploaded: "2026-11-12",
+      durationSeconds: 53,
+    },
+    links: ["/products/vehicle-wrapping-fleet-branding", "/riyadh/advertising-signage-printing"],
+    en: {
+      title: "Joint Clinic van branding",
+      summary: "Vehicle branding for Joint Clinic on a Hyundai Staria van: a rear-window graphic with the logo, QR code, phone number and social accounts, and vinyl graphics on both sides with the logo, the clinic's services, its phone number and flowing line artwork, applied by our team.",
+      scope: ["Rear-window graphic with logo and QR code", "Side vinyl graphics with logo and phone number", "Line artwork across the body", "Application on the vehicle"],
+    },
+    ar: {
+      title: "هوية سيارة جوينت كلينك",
+      summary: "هوية مركبة لجوينت كلينك على فان هيونداي ستاريا: ملصق للزجاج الخلفي بالشعار ورمز QR ورقم الهاتف وحسابات التواصل، وملصقات فينيل على الجانبين بالشعار وخدمات العيادة ورقم الهاتف وخطوط انسيابية، ركّبها فريقنا.",
+      scope: ["ملصق الزجاج الخلفي بالشعار ورمز QR", "ملصقات فينيل جانبية بالشعار ورقم الهاتف", "خطوط انسيابية على هيكل السيارة", "التركيب على المركبة"],
+    },
+  },
 ]
 
 /** Projects to show on a service or product page, given its path after /{lang}; closest match first. */
