@@ -164,6 +164,7 @@ export const products: Product[] = [
   {
     slug: "holographic-stickers",
     cat: "print",
+    photo: img("holographic-stickers.webp"),
     related: ["die-cut-stickers", "sticker-label-printing", "vinyl-lettering-cut-stickers"],
     en: {
       name: "Holographic stickers",
