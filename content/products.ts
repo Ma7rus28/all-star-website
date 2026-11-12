@@ -190,6 +190,7 @@ export const products: Product[] = [
   {
     slug: "vinyl-lettering-cut-stickers",
     cat: "print",
+    photo: img("vinyl-lettering.webp"),
     related: ["sticker-label-printing", "die-cut-stickers", "3d-led-letter-signage"],
     en: {
       name: "Vinyl lettering & cut-out stickers",
