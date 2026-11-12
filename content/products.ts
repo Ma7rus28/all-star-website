@@ -692,6 +692,7 @@ export const products: Product[] = [
   {
     slug: "custom-branded-safety-sets",
     cat: "custom",
+    photo: img("safety-sets.webp"),
     related: ["wayfinding-safety-signage", "custom-t-shirt-printing", "custom-hoodies-sweatshirts-jackets"],
     en: {
       name: "Custom-branded safety sets",
