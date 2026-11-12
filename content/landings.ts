@@ -43,7 +43,7 @@ export const landings: Landing[] = [
   {
     slug: "event-management-company",
     pillar: "events",
-    productCats: ["print", "custom"],
+    productCats: ["display", "print", "custom"],
     quoteService: "event",
     en: {
       title: "Event Management Company in Riyadh | All Star Productions",
