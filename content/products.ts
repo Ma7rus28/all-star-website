@@ -396,6 +396,7 @@ export const products: Product[] = [
   {
     slug: "led-screen-rental",
     cat: "display",
+    photo: img("led-screen.webp"),
     related: ["stage-venue-branding", "backdrop-printing-media-walls", "roll-up-pop-up-banner-stands"],
     en: {
       name: "LED screen rental",
@@ -742,6 +743,31 @@ export const products: Product[] = [
       intro: "الملابس الثقيلة تُبرز الشعار جيداً وتُلبس سنوات. نطبع أو نطرّز الهوديز والسويت شيرتات والجاكيتات بتصميمك، بالألوان والمقاسات التي تحتاجها، للموظفين والمدارس والفرق في الرياض وأنحاء السعودية.",
       features: ["هوديز بسحّاب وبدونه وسويت شيرتات وجاكيتات", "طباعة أو تطريز بحسب ما يناسب القماش", "مواضع على الصدر والظهر والأكمام", "قطعة عيّنة قبل طلب الجملة"],
       uses: ["الزيّ الشتوي للموظفين والطواقم", "ملابس المدارس والجامعات والأندية", "هدايا الشركات للموظفين", "منتجات العلامات وصنّاع المحتوى"],
+    },
+  },
+  {
+    slug: "polo-shirts-uniforms",
+    cat: "custom",
+    related: ["custom-t-shirt-printing", "custom-hoodies-sweatshirts-jackets", "name-badges-name-tags"],
+    en: {
+      name: "Polo shirts & uniforms",
+      card: "Polo shirts and staff uniforms embroidered or printed with your logo, in your team's sizes.",
+      title: "Custom Polo Shirts & Uniforms in Riyadh, Saudi Arabia",
+      description: "Custom polo shirt and uniform printing in Riyadh, Saudi Arabia: embroidered or printed polos, work shirts and staff uniforms with your logo for teams.",
+      h1: "Custom polo shirts and staff uniforms",
+      intro: "A polo shirt with your logo makes a team look smart and easy to recognise, at the counter, on site or at an event. We embroider or print polos, work shirts and uniforms with your branding, in the colours and sizes your staff need, for companies in Riyadh and across Saudi Arabia.",
+      features: ["Polo shirts in cotton and breathable sports fabrics", "Logo embroidery or printing on chest, sleeve and back", "Work shirts and staff uniforms in your brand colours", "Full size runs, from samples to bulk orders"],
+      uses: ["Retail, restaurant and reception staff", "Event and exhibition teams", "Company and corporate uniforms", "Schools, clubs and sports teams"],
+    },
+    ar: {
+      name: "بولو شيرت وزي موحّد",
+      card: "قمصان بولو وزي موحّد للموظفين مطرّزة أو مطبوعة بشعارك وبمقاسات فريقك.",
+      title: "طباعة وتطريز بولو شيرت وزي موحّد في الرياض",
+      description: "طباعة وتطريز قمصان بولو وزي موحّد في الرياض: بولو وقمصان عمل وملابس موظفين مطرّزة أو مطبوعة بشعارك للفرق والشركات والفعاليات في أنحاء السعودية.",
+      h1: "قمصان بولو وزي موحّد بشعارك",
+      intro: "قميص البولو الذي يحمل شعارك يمنح فريقك مظهراً أنيقاً يسهل تمييزه، عند الكاونتر أو في الموقع أو في الفعالية. نطرّز أو نطبع البولو وقمصان العمل والزي الموحّد بهويتك، بالألوان والمقاسات التي يحتاجها موظفوك، للشركات في الرياض وأنحاء السعودية.",
+      features: ["قمصان بولو قطنية ورياضية مسامية", "تطريز أو طباعة الشعار على الصدر والكم والظهر", "قمصان عمل وزي موحّد بألوان علامتك", "جميع المقاسات من العيّنات إلى طلبات الجملة"],
+      uses: ["موظفو المتاجر والمطاعم والاستقبال", "فرق الفعاليات والمعارض", "الزي الموحّد للشركات", "المدارس والأندية والفرق الرياضية"],
     },
   },
   {
