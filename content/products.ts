@@ -748,6 +748,7 @@ export const products: Product[] = [
   {
     slug: "polo-shirts-uniforms",
     cat: "custom",
+    photo: img("polo-uniforms.webp"),
     related: ["custom-t-shirt-printing", "custom-hoodies-sweatshirts-jackets", "name-badges-name-tags"],
     en: {
       name: "Polo shirts & uniforms",
