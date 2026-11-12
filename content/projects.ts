@@ -127,6 +127,26 @@ export const projects: Project[] = [
       alt: "جناح كات آيديا رقم D09 بأعمدة بنفسجية ولوحات علوية سوداء بالشعار وصور المنتجات على الجدران الخلفية وكاونترات بهوية العلامة",
     },
   },
+  {
+    slug: "namq-cafe-tabuk",
+    // A 3D design visual, not a photo of the finished front; the copy says so.
+    media: { kind: "photo", src: "/images/projects/namq-cafe-tabuk.jpg", width: 1010, height: 560 },
+    links: ["/riyadh/advertising-signage-printing", "/products/3d-led-letter-signage"],
+    en: {
+      title: "Namq Coffee & Roastery signage and decoration",
+      location: "Tabuk, Saudi Arabia",
+      summary: "Signage and decoration for the front of Namq Coffee & Roastery in Tabuk: an illuminated acrylic sign, large Styrofoam pieces (a hot-air balloon carried by a turtle, clouds, butterflies and stacked coffee cups), outdoor lighting and the design of the café front and outdoor seating area. Shown in our 3D design visual.",
+      scope: ["Illuminated acrylic signage", "Styrofoam balloon, turtle, clouds, butterflies and coffee cups", "Outdoor lighting", "Café front and outdoor area design"],
+      alt: "3D design visual of the Namq Coffee & Roastery front in Tabuk, with a Styrofoam hot-air balloon and turtle, clouds, butterflies, giant coffee cups and an illuminated sign above outdoor seating",
+    },
+    ar: {
+      title: "لوحات وديكور نمق قهوة ومحمصة",
+      location: "تبوك، السعودية",
+      summary: "لوحات وديكور لواجهة نمق قهوة ومحمصة في تبوك: لوحة أكريليك مضيئة، ومجسمات كبيرة من الفلين (منطاد تحمله سلحفاة وغيوم وفراشات وأكواب قهوة متراصّة)، وإضاءة خارجية، وتصميم الواجهة والجلسات الخارجية. الصورة من تصميمنا ثلاثي الأبعاد.",
+      scope: ["لوحة أكريليك مضيئة", "مجسمات فلين: منطاد وسلحفاة وغيوم وفراشات وأكواب قهوة", "إضاءة خارجية", "تصميم الواجهة والجلسات الخارجية"],
+      alt: "تصميم ثلاثي الأبعاد لواجهة نمق قهوة ومحمصة في تبوك، مع مجسمات فلين لمنطاد وسلحفاة وغيوم وفراشات وأكواب قهوة كبيرة ولوحة مضيئة فوق الجلسات الخارجية",
+    },
+  },
 ]
 
 /** Projects to show on a service or product page, given its path after /{lang}; closest match first. */

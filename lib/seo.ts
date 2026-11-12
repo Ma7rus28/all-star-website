@@ -21,7 +21,7 @@ export const siteUrl = (
 ).replace(/\/$/, "")
 
 /** Date of the last content change on the site (not the legal pages). Update it with each content release; the sitemap shows it to search engines. */
-export const contentUpdated = "2026-11-09"
+export const contentUpdated = "2026-11-12"
 
 /** Every indexable page, without the language prefix. */
 export const indexablePaths = [
