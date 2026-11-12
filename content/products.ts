@@ -266,6 +266,7 @@ export const products: Product[] = [
   {
     slug: "stainless-steel-signage",
     cat: "signage",
+    photo: img("stainless-steel-letter.webp"),
     related: ["3d-led-letter-signage", "halo-lit-arabic-illuminated-letters", "acp-cladding-facades"],
     en: {
       name: "Stainless steel signs",
