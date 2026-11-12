@@ -340,6 +340,7 @@ export const products: Product[] = [
   {
     slug: "forex-stands",
     cat: "display",
+    photo: img("forex-stands.webp"),
     en: {
       name: "Forex stands",
       card: "Printed Forex (PVC foam board) stands, cut-out standees and signs for shops and events.",
