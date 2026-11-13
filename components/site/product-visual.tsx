@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Flag, Gift, Lightbulb, Printer, RectangleVertical, Shirt } from "lucide-react"
+import { Flag, Gift, Hammer, Lightbulb, PenTool, Printer, RectangleVertical, Shirt } from "lucide-react"
 import type { Product } from "@/content/products"
 import { cn } from "@/lib/utils"
 
@@ -10,6 +10,8 @@ export const catIcons = {
   display: RectangleVertical,
   outdoor: Flag,
   gifts: Gift,
+  fitout: Hammer,
+  services: PenTool,
 } as const satisfies Record<Product["cat"], unknown>
 
 /**

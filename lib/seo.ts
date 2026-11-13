@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { industries } from "@/content/industries"
 import { landings } from "@/content/landings"
 import { products } from "@/content/products"
 import { locales, type Locale } from "@/lib/i18n"
@@ -30,6 +31,7 @@ export const indexablePaths = [
   "/projects",
   "/contact",
   ...landings.map((l) => `/riyadh/${l.slug}`),
+  ...industries.map((i) => `/industries/${i.slug}`),
   ...products.map((p) => `/products/${p.slug}`),
   "/privacy",
   "/terms",

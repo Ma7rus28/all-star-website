@@ -131,7 +131,7 @@ export const projects: Project[] = [
     slug: "namq-cafe-tabuk",
     // A 3D design visual, not a photo of the finished front; the copy says so.
     media: { kind: "photo", src: "/images/projects/namq-cafe-tabuk.jpg", width: 1010, height: 560 },
-    links: ["/riyadh/advertising-signage-printing", "/products/3d-led-letter-signage"],
+    links: ["/riyadh/advertising-signage-printing", "/products/3d-led-letter-signage", "/industries/restaurants-cafes"],
     en: {
       title: "Namq Coffee & Roastery signage and decoration",
       location: "Tabuk, Saudi Arabia",
@@ -158,7 +158,7 @@ export const projects: Project[] = [
       uploaded: "2026-11-12",
       durationSeconds: 53,
     },
-    links: ["/products/vehicle-wrapping-fleet-branding", "/riyadh/advertising-signage-printing"],
+    links: ["/products/vehicle-wrapping-fleet-branding", "/riyadh/advertising-signage-printing", "/industries/hospitals-clinics"],
     en: {
       title: "Joint Clinic van branding",
       summary: "Vehicle branding for Joint Clinic on a Hyundai Staria van: a rear-window graphic with the logo, QR code, phone number and social accounts, and vinyl graphics on both sides with the logo, the clinic's services, its phone number and flowing line artwork, applied by our team.",

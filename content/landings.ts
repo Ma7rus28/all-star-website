@@ -43,7 +43,7 @@ export const landings: Landing[] = [
   {
     slug: "event-management-company",
     pillar: "events",
-    productCats: ["display", "print", "custom"],
+    productCats: ["display", "print", "custom", "gifts"],
     quoteService: "event",
     en: {
       title: "Event Management Company in Riyadh | All Star Productions",
@@ -109,7 +109,7 @@ export const landings: Landing[] = [
   {
     slug: "exhibition-stand-builders",
     pillar: "exhibitions",
-    productCats: ["display", "print"],
+    productCats: ["display", "print", "fitout"],
     quoteService: "stand",
     en: {
       title: "Exhibition Planner & Stand Builders in Riyadh",
@@ -177,7 +177,7 @@ export const landings: Landing[] = [
   {
     slug: "advertising-signage-printing",
     pillar: "advertising",
-    productCats: ["signage", "outdoor", "print"],
+    productCats: ["signage", "outdoor", "print", "services"],
     quoteService: "advertising",
     en: {
       title: "Advertising Agency & Signage Company in Riyadh",

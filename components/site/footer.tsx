@@ -2,6 +2,7 @@ import Link from "next/link"
 import type { Dict } from "@/content"
 import type { Locale } from "@/lib/i18n"
 import { isSet, site, telHref } from "@/lib/site"
+import { industries } from "@/content/industries"
 import { landings } from "@/content/landings"
 import { CookieSettingsButton } from "./cookie-consent"
 import { Logo, navLinks } from "./header"
@@ -40,20 +41,36 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dict }) {
             ))}
           </ul>
         </nav>
-        <nav aria-label={dict.riyadh.footerTitle}>
-          <h2 className="text-sm font-semibold tracking-wide text-foreground uppercase">
-            {dict.riyadh.footerTitle}
-          </h2>
-          <ul className="mt-3">
-            {landings.map((l) => (
-              <li key={l.slug}>
-                <Link href={`/${lang}/riyadh/${l.slug}`} className={linkClass}>
-                  {l[lang].h1}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="grid content-start gap-10">
+          <nav aria-label={dict.riyadh.footerTitle}>
+            <h2 className="text-sm font-semibold tracking-wide text-foreground uppercase">
+              {dict.riyadh.footerTitle}
+            </h2>
+            <ul className="mt-3">
+              {landings.map((l) => (
+                <li key={l.slug}>
+                  <Link href={`/${lang}/riyadh/${l.slug}`} className={linkClass}>
+                    {l[lang].h1}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <nav aria-label={dict.industries.footerTitle}>
+            <h2 className="text-sm font-semibold tracking-wide text-foreground uppercase">
+              {dict.industries.footerTitle}
+            </h2>
+            <ul className="mt-3">
+              {industries.map((i) => (
+                <li key={i.slug}>
+                  <Link href={`/${lang}/industries/${i.slug}`} className={linkClass}>
+                    {i[lang].h1}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
         <nav aria-label={t.legal}>
           <h2 className="text-sm font-semibold tracking-wide text-foreground uppercase">
             {t.legal}

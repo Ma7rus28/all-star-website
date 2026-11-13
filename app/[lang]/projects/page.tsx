@@ -4,6 +4,7 @@ import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowRight, Check, MapPin } from "lucide-react"
 import { getDict } from "@/content"
+import { getIndustry } from "@/content/industries"
 import { getLanding } from "@/content/landings"
 import { getProduct } from "@/content/products"
 import { isPanoramic, projects, type Project } from "@/content/projects"
@@ -16,6 +17,7 @@ function linkLabel(link: string, lang: Locale) {
   const [, section, slug] = link.split("/")
   if (section === "products") return getProduct(slug)?.[lang].h1
   if (section === "riyadh") return getLanding(slug)?.[lang].h1
+  if (section === "industries") return getIndustry(slug)?.[lang].h1
 }
 
 // Saudi time, so Google is not left to guess the time zone of a date-only value.

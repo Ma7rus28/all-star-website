@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n"
+import { extraProducts } from "./products-extra"
 
 // One entry per catalogue product. Each has its own page at /{lang}/products/{slug},
 // written around the phrases Saudi buyers search for. Keep claims factual:
@@ -22,7 +23,7 @@ export type ProductCopy = {
 
 export type Product = {
   slug: string
-  cat: "custom" | "print" | "signage" | "display" | "outdoor" | "gifts"
+  cat: "custom" | "print" | "signage" | "display" | "outdoor" | "gifts" | "fitout" | "services"
   /** Leave out until a real photo of this product exists; the category icon is shown instead. */
   photo?: { src: string; zoom?: boolean }
   /** Slugs shown first under "Related products"; the rest is filled from the same category. */
@@ -975,6 +976,7 @@ export const products: Product[] = [
       uses: ["مواقع الإنشاء والمشاريع", "المصانع والمستودعات", "فرق تجهيز الفعاليات والمعارض", "جولات العملاء والزوار في المواقع"],
     },
   },
+  ...extraProducts,
 ]
 
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug)

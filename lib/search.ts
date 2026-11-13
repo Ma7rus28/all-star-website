@@ -1,5 +1,6 @@
 import "server-only"
 import { getDict } from "@/content"
+import { industries } from "@/content/industries"
 import { landings } from "@/content/landings"
 import { products } from "@/content/products"
 import { projects } from "@/content/projects"
@@ -45,6 +46,13 @@ export function buildSearchIndex(lang: Locale): SearchEntry[] {
       snippet: l[lang].description,
       terms: l[lang].services.join(" "),
       href: `${base}/riyadh/${l.slug}`,
+    })),
+    ...industries.map((i) => ({
+      kind: "service" as const,
+      title: i[lang].h1,
+      snippet: i[lang].description,
+      terms: i[lang].intro.join(" "),
+      href: `${base}/industries/${i.slug}`,
     })),
   ]
 

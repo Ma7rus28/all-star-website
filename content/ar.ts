@@ -150,6 +150,8 @@ export const ar: Dict = {
       { id: "display", label: "منصات عرض" },
       { id: "outdoor", label: "إعلانات خارجية" },
       { id: "gifts", label: "هدايا" },
+      { id: "fitout", label: "التجهيز والتصنيع" },
+      { id: "services", label: "خدمات" },
     ],
     count: "منتجاً معروضاً",
     ask: "اطلب عرض سعر",
@@ -341,5 +343,11 @@ export const ar: Dict = {
     quote: "اطلب عرض سعر",
     learnMore: "المزيد عن",
     inRiyadh: "في الرياض",
+  },
+  industries: {
+    footerTitle: "حسب القطاع",
+    products: "ما ننفّذه لك",
+    faq: "الأسئلة الشائعة",
+    quote: "اطلب عرض سعر",
   },
 }

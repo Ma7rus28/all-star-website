@@ -148,6 +148,8 @@ export const en = {
       { id: "display", label: "Displays" },
       { id: "outdoor", label: "Outdoor" },
       { id: "gifts", label: "Gifts" },
+      { id: "fitout", label: "Fit-out & fabrication" },
+      { id: "services", label: "Services" },
     ],
     count: "items shown",
     ask: "Ask for a quote",
@@ -339,6 +341,12 @@ export const en = {
     quote: "Request a quote",
     learnMore: "More about",
     inRiyadh: "in Riyadh",
+  },
+  industries: {
+    footerTitle: "By industry",
+    products: "What we make for you",
+    faq: "Frequently asked questions",
+    quote: "Request a quote",
   },
 }
 
