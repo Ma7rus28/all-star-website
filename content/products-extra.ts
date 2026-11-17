@@ -8,6 +8,7 @@ export const extraProducts: Product[] = [
   {
     slug: "a-frame-signs",
     cat: "signage",
+    photo: { src: "/images/work/a-frame-sign.webp" },
     related: ["wayfinding-safety-signage", "poster-stands-posters", "roll-up-pop-up-banner-stands"],
     en: {
       name: "A-frame signs",
