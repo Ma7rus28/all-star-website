@@ -85,7 +85,7 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
     url: `${siteUrl}/${lang}`,
     logo: `${siteUrl}/logo-mark.svg`,
     image: `${siteUrl}/images/projects/haier-product-launch.jpg`,
-    email: site.email,
+    telephone: site.whatsapp,
     address: {
       "@type": "PostalAddress",
       streetAddress: lang === "ar" ? site.streetAr : site.street,
@@ -109,7 +109,7 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
-      email: site.email,
+      telephone: site.whatsapp,
       areaServed: "SA",
       availableLanguage: ["Arabic", "English"],
     },

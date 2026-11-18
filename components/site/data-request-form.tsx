@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import type { Dict } from "@/content"
-import { isSet, site } from "@/lib/site"
+import { isSet, site, waHref } from "@/lib/site"
 import { parseDataRequest, type DataRequestField } from "@/lib/validate"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -35,7 +35,7 @@ export function DataRequestForm({
         headers: { "content-type": "application/json" },
         body: JSON.stringify(raw),
       })
-      if (res.status === 503 && isSet(site.privacyEmail)) {
+      if (res.status === 503 && isSet(site.whatsapp)) {
         const type = t.types.find((o) => o.v === data.type)?.l ?? data.type
         setDraft([type, "", `${t.email}: ${data.email}`, data.details].filter(Boolean).join("\n"))
         setState("manual")
@@ -88,10 +88,12 @@ export function DataRequestForm({
         <Notice tone="success">
           <p>{t.manual}</p>
           <a
-            href={`mailto:${site.privacyEmail}?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(draft)}`}
+            href={`${waHref(site.whatsapp)}?text=${encodeURIComponent(`${t.subject}\n\n${draft}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn btn-gold mt-4"
           >
-            {t.viaEmail}
+            {t.viaWhatsapp}
           </a>
         </Notice>
       )}

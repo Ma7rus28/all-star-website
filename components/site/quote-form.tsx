@@ -183,14 +183,6 @@ export function QuoteForm({ t, lang }: { t: Dict["form"]; lang: Locale }) {
                 {t.viaWhatsapp}
               </a>
             )}
-            {isSet(site.email) && (
-              <a
-                href={`mailto:${site.email}?subject=${encodeURIComponent(t.subject)}&body=${encodeURIComponent(draft)}`}
-                className="btn btn-line"
-              >
-                {t.viaEmail}
-              </a>
-            )}
           </div>
         </Notice>
       )}

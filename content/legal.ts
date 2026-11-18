@@ -25,7 +25,7 @@ const en: Record<LegalSlug, LegalDoc> = {
       {
         h: "Who is responsible for your data",
         p: [
-          `The controller is ${site.name}, ${site.address}. For any privacy question contact ${site.privacyEmail}.`,
+          `The controller is ${site.name}, ${site.address}. For any privacy question, use the data request page or message us on WhatsApp ${site.whatsapp}.`,
         ],
       },
       {
@@ -74,7 +74,7 @@ const en: Record<LegalSlug, LegalDoc> = {
           "Withdraw consent at any time.",
         ],
         p: [
-          "Use the data request page or email us. We reply within 30 days. If you are not satisfied with our answer you may complain to the Saudi Data & AI Authority (SDAIA).",
+          "Use the data request page or message us on WhatsApp. We reply within 30 days. If you are not satisfied with our answer you may complain to the Saudi Data & AI Authority (SDAIA).",
         ],
       },
       {
@@ -96,7 +96,7 @@ const en: Record<LegalSlug, LegalDoc> = {
     description: `Terms for using this website and ordering services from ${c}. A signed quote or contract for a project takes priority where they differ.`,
     intro: `These terms apply when you use this website or order services from ${c}. A signed quote or contract for a specific project takes priority over these terms where they differ.`,
     sections: [
-      { h: "About us", p: [`${site.name}, ${site.address}. Contact: ${site.email}, WhatsApp ${site.whatsapp}.`] },
+      { h: "About us", p: [`${site.name}, ${site.address}. Contact: WhatsApp ${site.whatsapp}.`] },
       {
         h: "Quotes and orders",
         ul: [
@@ -165,7 +165,7 @@ const en: Record<LegalSlug, LegalDoc> = {
         h: "How refunds are paid",
         p: ["Refunds are paid by bank transfer to the account you paid from, usually within 7 to 14 working days of being confirmed. We do not charge a fee for processing a refund."],
       },
-      { h: "How to ask", p: [`Email ${site.email} with your quote or invoice reference. We confirm the refund amount in writing before it is issued.`] },
+      { h: "How to ask", p: [`Message us on WhatsApp ${site.whatsapp} with your quote or invoice reference. We confirm the refund amount in writing before it is issued.`] },
     ],
   },
   cookies: {
@@ -207,7 +207,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
     sections: [
       {
         h: "الجهة المسؤولة عن بياناتك",
-        p: [`جهة التحكم هي ${site.name}، ${site.addressAr}. لأي استفسار يخص الخصوصية راسلنا على ${site.privacyEmail}.`],
+        p: [`جهة التحكم هي ${site.name}، ${site.addressAr}. لأي استفسار يخص الخصوصية استخدم صفحة طلبات البيانات أو راسلنا عبر واتساب ${site.whatsapp}.`],
       },
       {
         h: "ما الذي نجمعه ولماذا",
@@ -248,7 +248,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
           "حذف بياناتك عند انتهاء الحاجة إليها.",
           "سحب موافقتك في أي وقت.",
         ],
-        p: ["استخدم صفحة طلبات البيانات أو راسلنا بالبريد الإلكتروني. نرد خلال 30 يوماً. وإذا لم يرضِك ردّنا فلك أن تتقدم بشكوى إلى الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)."],
+        p: ["استخدم صفحة طلبات البيانات أو راسلنا عبر واتساب. نرد خلال 30 يوماً. وإذا لم يرضِك ردّنا فلك أن تتقدم بشكوى إلى الهيئة السعودية للبيانات والذكاء الاصطناعي (سدايا)."],
       },
       {
         h: "الأطفال",
@@ -264,7 +264,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
     title: "شروط الخدمة",
     intro: `تسري هذه الشروط عند استخدامك هذا الموقع أو طلبك خدمات من ${cAr}. وعند الاختلاف، تكون الأولوية لعرض السعر الموقّع أو العقد الخاص بالمشروع.`,
     sections: [
-      { h: "من نحن", p: [`${site.name}، ${site.addressAr}. للتواصل: ${site.email}، واتساب ${site.whatsapp}.`] },
+      { h: "من نحن", p: [`${site.name}، ${site.addressAr}. للتواصل: واتساب ${site.whatsapp}.`] },
       {
         h: "عروض الأسعار والطلبات",
         ul: [
@@ -305,7 +305,7 @@ const ar: Record<LegalSlug, LegalDoc> = {
       { h: "إذا كان هناك خلل", p: ["إذا كان ما سلّمناه معيباً أو غير مطابق للعرض والتصميم المعتمدين فأبلغنا خلال 7 أيام من التسليم مع صور. سنصلحه أو نعيد إنتاجه على نفقتنا، أو نعيد قيمة البند المتأثر إن تعذّر ذلك."] },
       { h: "إذا ألغينا نحن", p: ["إذا تعذّر علينا تنفيذ طلب مؤكد فإننا نعيد كل ما دفعته عن الجزء غير المنفّذ."] },
       { h: "طريقة ردّ المبالغ", p: ["تُعاد المبالغ بالتحويل البنكي إلى الحساب الذي دفعت منه، عادةً خلال 7 إلى 14 يوم عمل من تأكيدها. لا نتقاضى أي رسوم على معالجة الاسترداد."] },
-      { h: "كيف تطلب الاسترداد", p: [`راسلنا على ${site.email} مع رقم عرض السعر أو الفاتورة. نؤكد لك مبلغ الاسترداد كتابياً قبل صرفه.`] },
+      { h: "كيف تطلب الاسترداد", p: [`راسلنا عبر واتساب ${site.whatsapp} مع رقم عرض السعر أو الفاتورة. نؤكد لك مبلغ الاسترداد كتابياً قبل صرفه.`] },
     ],
   },
   cookies: {

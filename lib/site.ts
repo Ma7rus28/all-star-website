@@ -16,8 +16,6 @@ export const site = {
   /** Google Business Profile share link. */
   googleProfile: "https://share.google/jsYogD8vO5lHHy6s2",
   whatsapp: "+966 57 895 2076",
-  email: "mahrus0murshed@gmail.com",
-  privacyEmail: "mahrus0murshed@gmail.com",
   hours: "Sat–Thu, 9:00–21:00 (AST)",
   hoursAr: "السبت – الخميس، 9:00 – 21:00",
   legalUpdated: "2026-11-05",

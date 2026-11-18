@@ -30,7 +30,6 @@ export default async function Contact({ params }: PageProps<"/[lang]/contact">) 
       more: { href: site.googleProfile, label: t.map },
     },
     { label: t.whatsapp, value: site.whatsapp, href: isSet(site.whatsapp) ? waHref(site.whatsapp) : undefined, ltr: true },
-    { label: t.email, value: site.email, href: isSet(site.email) ? `mailto:${site.email}` : undefined, ltr: true },
     { label: t.hours, value: lang === "ar" ? site.hoursAr : site.hours },
   ]
 
