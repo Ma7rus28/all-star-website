@@ -34,6 +34,7 @@ export const extraProducts: Product[] = [
   {
     slug: "road-parking-signs",
     cat: "signage",
+    photo: { src: "/images/work/road-parking-sign.webp" },
     related: ["wayfinding-safety-signage", "parking-permits-hang-tags", "a-frame-signs"],
     en: {
       name: "Road & parking signs",
@@ -59,6 +60,7 @@ export const extraProducts: Product[] = [
   {
     slug: "unipoles-billboards",
     cat: "outdoor",
+    photo: { src: "/images/work/billboard.webp" },
     related: ["building-wraps-hoarding-graphics", "large-format-banner-printing", "flags-pole-banners"],
     en: {
       name: "Unipoles & billboards",
@@ -86,6 +88,7 @@ export const extraProducts: Product[] = [
   {
     slug: "entrance-arches-reception-branding",
     cat: "display",
+    photo: { src: "/images/work/event-arch.webp" },
     related: ["stage-venue-branding", "promotion-counters-display-cubes", "backdrop-printing-media-walls"],
     en: {
       name: "Entrance arches & reception branding",

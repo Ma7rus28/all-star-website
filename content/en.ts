@@ -201,7 +201,6 @@ export const en = {
     legalName: "Legal name",
     address: "Address",
     map: "Find us on Google Maps",
-    phone: "Phone",
     whatsapp: "WhatsApp",
     email: "Email",
     hours: "Working hours",

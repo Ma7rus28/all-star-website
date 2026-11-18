@@ -203,7 +203,6 @@ export const ar: Dict = {
     legalName: "الاسم القانوني",
     address: "العنوان",
     map: "موقعنا على خرائط Google",
-    phone: "الهاتف",
     whatsapp: "واتساب",
     email: "البريد الإلكتروني",
     hours: "ساعات العمل",

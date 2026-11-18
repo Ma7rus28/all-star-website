@@ -6,7 +6,7 @@ import { QuoteForm } from "@/components/site/quote-form"
 import { PageHead } from "@/components/site/sections"
 import { hasLocale } from "@/lib/i18n"
 import { pageMeta } from "@/lib/seo"
-import { isSet, site, telHref, waHref } from "@/lib/site"
+import { isSet, site, waHref } from "@/lib/site"
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/contact">): Promise<Metadata> {
   const { lang } = await params
@@ -29,7 +29,6 @@ export default async function Contact({ params }: PageProps<"/[lang]/contact">) 
       value: lang === "ar" ? site.addressAr : site.address,
       more: { href: site.googleProfile, label: t.map },
     },
-    { label: t.phone, value: site.phone, href: isSet(site.phone) ? telHref(site.phone) : undefined, ltr: true },
     { label: t.whatsapp, value: site.whatsapp, href: isSet(site.whatsapp) ? waHref(site.whatsapp) : undefined, ltr: true },
     { label: t.email, value: site.email, href: isSet(site.email) ? `mailto:${site.email}` : undefined, ltr: true },
     { label: t.hours, value: lang === "ar" ? site.hoursAr : site.hours },

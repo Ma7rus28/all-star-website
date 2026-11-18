@@ -15,7 +15,6 @@ export const site = {
   countryCode: "SA",
   /** Google Business Profile share link. */
   googleProfile: "https://share.google/jsYogD8vO5lHHy6s2",
-  phone: "+966 55 037 5791",
   whatsapp: "+966 57 895 2076",
   email: "mahrus0murshed@gmail.com",
   privacyEmail: "mahrus0murshed@gmail.com",
@@ -26,6 +25,5 @@ export const site = {
 
 export const isSet = (value: string) => !value.startsWith("[")
 
-export const telHref = (value: string) => `tel:${value.replace(/[^\d+]/g, "")}`
 export const waHref = (value: string) =>
   `https://wa.me/${value.replace(/\D/g, "")}`

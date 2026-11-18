@@ -1,7 +1,7 @@
 import Link from "next/link"
 import type { Dict } from "@/content"
 import type { Locale } from "@/lib/i18n"
-import { isSet, site, telHref } from "@/lib/site"
+import { isSet, site } from "@/lib/site"
 import { industries } from "@/content/industries"
 import { landings } from "@/content/landings"
 import { CookieSettingsButton } from "./cookie-consent"
@@ -95,13 +95,6 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dict }) {
           <address className="mt-5 grid gap-2 text-muted-foreground not-italic">
             <span className="font-medium text-foreground">{site.name}</span>
             <span>{lang === "ar" ? site.addressAr : site.address}</span>
-            {isSet(site.phone) ? (
-              <a href={telHref(site.phone)} className={linkClass}>
-                <bdi dir="ltr">{site.phone}</bdi>
-              </a>
-            ) : (
-              <bdi dir="ltr">{site.phone}</bdi>
-            )}
             {isSet(site.email) ? (
               <a href={`mailto:${site.email}`} className={linkClass}>
                 {site.email}
