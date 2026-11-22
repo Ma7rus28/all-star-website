@@ -5,7 +5,7 @@ import { notFound } from "next/navigation"
 import { ArrowRight, Check } from "lucide-react"
 import { getDict } from "@/content"
 import { getLanding, landings } from "@/content/landings"
-import { products } from "@/content/products"
+import { getProduct, products } from "@/content/products"
 import { RelatedProjects } from "@/components/site/related-projects"
 import { CtaBand } from "@/components/site/sections"
 import { hasLocale, locales } from "@/lib/i18n"
@@ -33,8 +33,13 @@ export default async function RiyadhLanding({ params }: PageProps<"/[lang]/riyad
   const t = getDict(lang)
   const c = landing[lang]
   const photo = pillarPhotos[landing.pillar]
-  // Every product in the linked categories, so each product page is linked from a Riyadh page.
-  const related = products.filter((p) => landing.productCats.includes(p.cat))
+  // A hand-picked list for pages about one kind of event; otherwise every product in the linked
+  // categories, so each product page is linked from a Riyadh page.
+  const related = landing.productSlugs
+    ? landing.productSlugs.map(getProduct).filter((p): p is NonNullable<typeof p> => !!p)
+    : products.filter((p) => landing.productCats.includes(p.cat))
+  // Other Riyadh pages in the same service area, linked by their headings.
+  const siblings = landings.filter((l) => l.pillar === landing.pillar && l.slug !== slug)
   const url = `${siteUrl}/${lang}/riyadh/${slug}`
   const quoteHref = `/${lang}/contact?service=${landing.quoteService}`
 
@@ -183,7 +188,30 @@ export default async function RiyadhLanding({ params }: PageProps<"/[lang]/riyad
         </section>
       )}
 
-      <section aria-labelledby="faq" className="py-16 md:py-24">
+      {siblings.length > 0 && (
+        <section aria-labelledby="related-services" className="py-16 md:py-24">
+          <div className="wrap">
+            <h2 id="related-services" className="text-3xl font-extrabold md:text-4xl">
+              {t.riyadh.related}
+            </h2>
+            <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {siblings.map((l) => (
+                <li key={l.slug}>
+                  <Link
+                    href={`/${lang}/riyadh/${l.slug}`}
+                    className="flex min-h-14 items-center justify-between gap-3 rounded-xl border border-border bg-card px-4 py-3 font-semibold hover:border-gold"
+                  >
+                    {l[lang].h1}
+                    <ArrowRight aria-hidden="true" className="size-4 shrink-0 text-gold rtl:rotate-180" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
+      <section aria-labelledby="faq" className="border-t border-border py-16 md:py-24">
         <div className="wrap max-w-4xl">
           <h2 id="faq" className="text-3xl font-extrabold md:text-4xl">
             {t.riyadh.faq}

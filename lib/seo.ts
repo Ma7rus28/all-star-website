@@ -22,7 +22,7 @@ export const siteUrl = (
 ).replace(/\/$/, "")
 
 /** Date of the last content change on the site (not the legal pages). Update it with each content release; the sitemap shows it to search engines. */
-export const contentUpdated = "2026-11-12"
+export const contentUpdated = "2026-11-22"
 
 /** Every indexable page, without the language prefix. */
 export const indexablePaths = [
@@ -113,8 +113,9 @@ export function businessJsonLd(lang: Locale, description: string, services: stri
       areaServed: "SA",
       availableLanguage: ["Arabic", "English"],
     },
-    hasMap: site.googleProfile,
-    sameAs: [`https://wa.me/${site.whatsapp.replace(/\D/g, "")}`],
+    geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
+    hasMap: site.mapsUrl,
+    sameAs: [site.googleProfile, `https://wa.me/${site.whatsapp.replace(/\D/g, "")}`],
     knowsLanguage: ["en", "ar"],
     makesOffer: services.map((name) => ({
       "@type": "Offer",

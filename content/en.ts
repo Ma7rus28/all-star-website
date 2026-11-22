@@ -339,6 +339,7 @@ export const en = {
     quote: "Request a quote",
     learnMore: "More about",
     inRiyadh: "in Riyadh",
+    related: "Related services",
   },
   industries: {
     footerTitle: "By industry",

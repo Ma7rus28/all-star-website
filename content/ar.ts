@@ -341,6 +341,7 @@ export const ar: Dict = {
     quote: "اطلب عرض سعر",
     learnMore: "المزيد عن",
     inRiyadh: "في الرياض",
+    related: "خدمات ذات صلة",
   },
   industries: {
     footerTitle: "حسب القطاع",

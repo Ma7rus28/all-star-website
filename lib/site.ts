@@ -15,6 +15,9 @@ export const site = {
   countryCode: "SA",
   /** Google Business Profile share link. */
   googleProfile: "https://share.google/jsYogD8vO5lHHy6s2",
+  /** Google Maps listing and map pin (seo/BRIEF.md). */
+  mapsUrl: "https://maps.google.com/?cid=10262380881990550896",
+  geo: { latitude: 24.6310646, longitude: 46.7354642 },
   whatsapp: "+966 57 895 2076",
   hours: "Sat–Thu, 9:00–21:00 (AST)",
   hoursAr: "السبت – الخميس، 9:00 – 21:00",
