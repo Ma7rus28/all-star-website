@@ -219,6 +219,7 @@ export const extraProducts: Product[] = [
   // Printing
   {
     slug: "danglers-pos-displays",
+    photo: { src: "/images/work/stock-danglers-pos-displays.webp" },
     cat: "print",
     related: ["sticker-label-printing", "poster-stands-posters", "promotion-counters-display-cubes"],
     en: {
@@ -244,6 +245,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "canvas-prints",
+    photo: { src: "/images/work/stock-canvas-prints.webp" },
     cat: "print",
     related: ["custom-wallpaper", "acrylic-fabrication", "corporate-gifts"],
     en: {
@@ -269,6 +271,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "invoice-books-receipts",
+    photo: { src: "/images/work/stock-invoice-books-receipts.webp" },
     cat: "print",
     related: ["business-cards-stationery-printing", "rubber-stamps", "booklet-catalogue-printing"],
     en: {
@@ -294,6 +297,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "calendars",
+    photo: { src: "/images/work/stock-calendars.webp" },
     cat: "print",
     related: ["corporate-gifts", "booklet-catalogue-printing", "business-cards-stationery-printing"],
     en: {
@@ -319,6 +323,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "certificates-vouchers-tickets",
+    photo: { src: "/images/work/stock-certificates-vouchers-tickets.webp" },
     cat: "print",
     related: ["holographic-stickers", "invitation-greeting-cards", "premium-business-cards"],
     en: {
@@ -344,6 +349,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "invitation-greeting-cards",
+    photo: { src: "/images/work/stock-invitation-greeting-cards.webp" },
     cat: "print",
     related: ["certificates-vouchers-tickets", "premium-business-cards", "gift-boxes-packaging"],
     en: {
@@ -369,6 +375,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "premium-business-cards",
+    photo: { src: "/images/work/stock-premium-business-cards.webp" },
     cat: "print",
     related: ["business-cards-stationery-printing", "invitation-greeting-cards", "name-badges-name-tags"],
     en: {
@@ -396,6 +403,7 @@ export const extraProducts: Product[] = [
   // Clothing and gifts
   {
     slug: "sports-jerseys",
+    photo: { src: "/images/work/stock-sports-jerseys.webp" },
     cat: "custom",
     related: ["polo-shirts-uniforms", "custom-t-shirt-printing", "flags-pole-banners"],
     en: {
@@ -421,6 +429,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "delegate-press-kits",
+    photo: { src: "/images/work/stock-delegate-press-kits.webp" },
     cat: "gifts",
     related: ["event-giveaways-lanyards", "corporate-gifts", "gift-boxes-packaging"],
     en: {
@@ -446,6 +455,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "promotional-umbrellas",
+    photo: { src: "/images/work/stock-promotional-umbrellas.webp" },
     cat: "gifts",
     related: ["corporate-gifts", "custom-bags-caps-mugs", "event-giveaways-lanyards"],
     en: {
@@ -471,6 +481,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "usb-mouse-pads-coasters",
+    photo: { src: "/images/work/stock-usb-mouse-pads-coasters.webp" },
     cat: "gifts",
     related: ["corporate-gifts", "delegate-press-kits", "gift-boxes-packaging"],
     en: {
@@ -496,6 +507,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "gift-boxes-packaging",
+    photo: { src: "/images/work/stock-gift-boxes-packaging.webp" },
     cat: "gifts",
     related: ["corporate-gifts", "delegate-press-kits", "cups-food-packaging"],
     en: {
@@ -523,6 +535,7 @@ export const extraProducts: Product[] = [
   // Fit-out and fabrication
   {
     slug: "custom-wallpaper",
+    photo: { src: "/images/work/stock-custom-wallpaper.webp" },
     cat: "fitout",
     related: ["sticker-label-printing", "canvas-prints", "glass-partitions"],
     en: {
@@ -548,6 +561,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "glass-partitions",
+    photo: { src: "/images/work/stock-glass-partitions.webp" },
     cat: "fitout",
     related: ["sticker-label-printing", "acp-cladding-facades", "custom-wallpaper"],
     en: {
@@ -573,6 +587,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "cnc-cutting",
+    photo: { src: "/images/work/stock-cnc-cutting.webp" },
     cat: "fitout",
     related: ["laser-cutting-engraving", "decorative-cnc-panels", "acrylic-fabrication"],
     en: {
@@ -598,6 +613,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "laser-cutting-engraving",
+    photo: { src: "/images/work/stock-laser-cutting-engraving.webp" },
     cat: "fitout",
     related: ["cnc-cutting", "acrylic-fabrication", "invitation-greeting-cards"],
     en: {
@@ -623,6 +639,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "decorative-cnc-panels",
+    photo: { src: "/images/work/stock-decorative-cnc-panels.webp" },
     cat: "fitout",
     related: ["cnc-cutting", "laser-cutting-engraving", "custom-wallpaper"],
     en: {
@@ -648,6 +665,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "landscaping",
+    photo: { src: "/images/work/stock-landscaping.webp" },
     cat: "fitout",
     related: ["decorative-cnc-panels", "glass-partitions", "stage-venue-branding"],
     en: {
@@ -675,6 +693,7 @@ export const extraProducts: Product[] = [
   // Services
   {
     slug: "graphic-design",
+    photo: { src: "/images/work/stock-graphic-design.webp" },
     cat: "services",
     related: ["3d-design-visuals", "business-cards-stationery-printing", "digital-marketing"],
     en: {
@@ -700,6 +719,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "3d-design-visuals",
+    photo: { src: "/images/work/stock-3d-design-visuals.webp" },
     cat: "services",
     related: ["graphic-design", "stage-venue-branding", "acp-cladding-facades"],
     en: {
@@ -725,6 +745,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "installation-removal",
+    photo: { src: "/images/work/stock-installation-removal.webp" },
     cat: "services",
     related: ["signage-maintenance", "building-wraps-hoarding-graphics", "sticker-label-printing"],
     en: {
@@ -750,6 +771,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "signage-maintenance",
+    photo: { src: "/images/work/stock-signage-maintenance.webp" },
     cat: "services",
     related: ["3d-led-letter-signage", "light-box-signage", "installation-removal"],
     en: {
@@ -775,6 +797,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "web-development",
+    photo: { src: "/images/work/stock-web-development.webp" },
     cat: "services",
     related: ["digital-marketing", "graphic-design", "3d-design-visuals"],
     en: {
@@ -800,6 +823,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "digital-marketing",
+    photo: { src: "/images/work/stock-digital-marketing.webp" },
     cat: "services",
     related: ["web-development", "graphic-design", "large-format-banner-printing"],
     en: {
