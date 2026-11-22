@@ -113,6 +113,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "photo-booth-setup",
+    photo: { src: "/images/work/photo-booth.webp" },
     cat: "display",
     related: ["backdrop-printing-media-walls", "stage-venue-branding", "forex-stands"],
     en: {
@@ -138,6 +139,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "projector-av-rental",
+    photo: { src: "/images/work/projector-av.webp" },
     cat: "display",
     related: ["led-screen-rental", "stage-venue-branding", "kiosks"],
     en: {
@@ -163,6 +165,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "kiosks",
+    photo: { src: "/images/work/kiosk.webp" },
     cat: "display",
     related: ["promotion-counters-display-cubes", "roll-up-pop-up-banner-stands", "fabric-light-boxes"],
     en: {
@@ -188,6 +191,7 @@ export const extraProducts: Product[] = [
   },
   {
     slug: "poster-stands-posters",
+    photo: { src: "/images/work/poster-stand.webp" },
     cat: "display",
     related: ["a-frame-signs", "forex-stands", "danglers-pos-displays"],
     en: {
