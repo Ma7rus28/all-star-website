@@ -5,6 +5,7 @@ import { BriefBuilder } from "@/components/site/brief-builder"
 import { Catalogue } from "@/components/site/catalogue"
 import { Hero } from "@/components/site/hero"
 import { Pillars } from "@/components/site/pillars"
+import { Reviews } from "@/components/site/reviews"
 import { CtaBand, Faq, Marquee, Pricing, Process, SectionHead } from "@/components/site/sections"
 import { hasLocale } from "@/lib/i18n"
 import { faqJsonLd, siteUrl } from "@/lib/seo"
@@ -27,6 +28,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       <Process t={t.process} />
+
+      <Reviews t={t.reviews} lang={lang} />
 
       <section id="brief" className="border-y border-border bg-[#0b0a08] py-24 md:py-32">
         <div className="wrap">

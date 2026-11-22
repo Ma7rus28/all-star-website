@@ -181,8 +181,16 @@ export const en = {
       { q: "Do you work outside Riyadh and Jeddah?", a: "Tell us the city in the form. Transport and accommodation for other locations are listed as separate lines in the quote." },
       { q: "How do I pay?", a: "Payment stages are written on your quote, and you pay by bank transfer. Message us on WhatsApp with your quote reference and we send the bank details." },
       { q: "What if I need to cancel?", a: "Cancellation and refund terms depend on how far the work has progressed. They are set out in our Refund Policy and repeated on your quote." },
+      { q: "Does All Star Productions have customer reviews?", a: "Yes. All Star Productions is rated 5.0 on Google from 24 customer reviews (November 2026), for exhibition stands, events and printing in Riyadh. You can read every review on our Google Business Profile." },
       { q: "What do you do with my details?", a: "We use them only to reply to your enquiry and deliver your project. See the Privacy Policy, or use the data request page to get a copy of your data or have it deleted." },
     ],
+  },
+  reviews: {
+    eyebrow: "Google reviews",
+    title: "Rated 5.0 on Google by customers in Riyadh.",
+    sub: "24 reviews on our Google Business Profile, all five stars (November 2026). A few of them, in the customers' own words:",
+    cta: "Read all reviews on Google",
+    stars: "5 out of 5 stars",
   },
   cta: {
     title: "Got a date and a venue? Let's talk.",

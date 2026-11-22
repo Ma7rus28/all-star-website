@@ -3,6 +3,7 @@ import { notFound } from "next/navigation"
 import { Suspense } from "react"
 import { getDict } from "@/content"
 import { QuoteForm } from "@/components/site/quote-form"
+import { Reviews } from "@/components/site/reviews"
 import { PageHead } from "@/components/site/sections"
 import { hasLocale } from "@/lib/i18n"
 import { pageMeta } from "@/lib/seo"
@@ -69,6 +70,7 @@ export default async function Contact({ params }: PageProps<"/[lang]/contact">) 
           </dl>
         </aside>
       </div>
+      <Reviews t={dict.reviews} lang={lang} />
     </>
   )
 }
