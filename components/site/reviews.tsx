@@ -22,7 +22,7 @@ export function Reviews({ t, lang }: { t: Dict["reviews"]; lang: Locale }) {
     <section id="reviews" className="py-24 md:py-32">
       <div className="wrap">
         <SectionHead eyebrow={t.eyebrow} title={t.title} sub={t.sub} />
-        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r, i) => (
             <li key={r.en.service}>
               <Reveal delay={i * 80} className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">

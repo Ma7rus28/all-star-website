@@ -188,7 +188,7 @@ export const en = {
   reviews: {
     eyebrow: "Google reviews",
     title: "Rated 5.0 on Google by customers in Riyadh.",
-    sub: "24 reviews on our Google Business Profile, all five stars (November 2026). A few of them, in the customers' own words:",
+    sub: "24 reviews on our Google Business Profile, all five stars (November 2026). A few of them, in the customers' own words (translated where written in Arabic):",
     cta: "Read all reviews on Google",
     stars: "5 out of 5 stars",
   },
