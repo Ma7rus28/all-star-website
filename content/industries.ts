@@ -24,7 +24,7 @@ export const industries: Industry[] = [
     products: ["3d-led-letter-signage", "halo-lit-arabic-illuminated-letters", "led-neon-signs", "acp-cladding-facades", "cups-food-packaging", "booklet-catalogue-printing", "sticker-label-printing", "a-frame-signs", "custom-wallpaper", "polo-shirts-uniforms", "landscaping", "digital-marketing"],
     en: {
       title: "Restaurant & Café Branding and Signage in Riyadh",
-      description: "Restaurant and café branding in Riyadh, Saudi Arabia: shop signs, façades, menus, cups and food packaging, interiors and staff uniforms from one supplier.",
+      description: "Restaurant & café branding and signage in Riyadh, Saudi Arabia: shop signs, façades, menus, cups and food packaging, interiors and staff uniforms.",
       h1: "Branding and signage for restaurants and cafés",
       intro: [
         "Opening or refreshing a restaurant or café means signs, a façade, menus, packaging, uniforms and décor, all in the same identity and all ready on the same day. We make all of it, so you deal with one team instead of six suppliers.",
@@ -37,7 +37,7 @@ export const industries: Industry[] = [
     },
     ar: {
       title: "هوية ولوحات المطاعم والكافيهات في الرياض",
-      description: "هوية المطاعم والكافيهات في الرياض: لوحات محلات وواجهات وقوائم طعام وأكواب وتغليف أطعمة وديكور وزي موحّد للموظفين من مورد واحد في أنحاء السعودية.",
+      description: "هوية ولوحات المطاعم والكافيهات في الرياض: لوحات محلات وواجهات وقوائم طعام وأكواب وتغليف أطعمة وديكور وزي موحّد للموظفين من مورد واحد في أنحاء السعودية.",
       h1: "الهوية واللوحات للمطاعم والكافيهات",
       intro: [
         "افتتاح مطعم أو كافيه أو تجديده يعني لوحات وواجهة وقوائم طعام وتغليفاً وزياً موحّداً وديكوراً، كلها بالهوية نفسها وجاهزة في اليوم نفسه. ننفّذها كلها، فتتعامل مع فريق واحد بدلاً من ستة موردين.",
@@ -54,7 +54,7 @@ export const industries: Industry[] = [
     products: ["wayfinding-safety-signage", "3d-led-letter-signage", "stainless-steel-signage", "sticker-label-printing", "glass-partitions", "custom-wallpaper", "vehicle-wrapping-fleet-branding", "polo-shirts-uniforms", "name-badges-name-tags", "booklet-catalogue-printing", "invoice-books-receipts", "road-parking-signs"],
     en: {
       title: "Hospital & Clinic Signage and Branding in Riyadh",
-      description: "Hospital and clinic branding in Riyadh, Saudi Arabia: bilingual wayfinding, façade signs, glass frosting, van branding, uniforms, badges and printed forms.",
+      description: "Hospital & clinic signage and branding in Riyadh, Saudi Arabia: bilingual wayfinding, façade signs, glass frosting, van branding, uniforms and forms.",
       h1: "Signage and branding for hospitals and clinics",
       intro: [
         "Patients arrive anxious and in a hurry, so a clinic has to be easy to find and easy to move around. We make façade signs, bilingual wayfinding, room and door plates, glass frosting for privacy, parking signs, branded vehicles, staff uniforms and badges, and printed forms.",
@@ -67,7 +67,7 @@ export const industries: Industry[] = [
     },
     ar: {
       title: "لوحات وهوية المستشفيات والعيادات في الرياض",
-      description: "هوية المستشفيات والعيادات في الرياض: لوحات إرشادية باللغتين ولوحات واجهات وتغشية زجاج وهوية سيارات وزي موحّد وبطاقات ونماذج مطبوعة في السعودية.",
+      description: "لوحات وهوية المستشفيات والعيادات في الرياض: لوحات إرشادية باللغتين ولوحات واجهات وتغشية زجاج وهوية سيارات وزي موحّد وبطاقات ونماذج مطبوعة في السعودية.",
       h1: "اللوحات والهوية للمستشفيات والعيادات",
       intro: [
         "يصل المرضى قلقين ومستعجلين، فيجب أن يكون الوصول إلى العيادة والتنقل داخلها سهلاً. نصنع لوحات الواجهات واللوحات الإرشادية باللغتين ولوحات الغرف والأبواب وتغشية الزجاج للخصوصية ولوحات المواقف، ونغلّف السيارات، ونجهّز الزي الموحّد وبطاقات الأسماء والنماذج المطبوعة.",
@@ -84,7 +84,7 @@ export const industries: Industry[] = [
     products: ["wayfinding-safety-signage", "large-format-banner-printing", "backdrop-printing-media-walls", "stage-venue-branding", "certificates-vouchers-tickets", "polo-shirts-uniforms", "sports-jerseys", "booklet-catalogue-printing", "name-badges-name-tags", "custom-wallpaper", "calendars", "roll-up-pop-up-banner-stands"],
     en: {
       title: "School & University Signage and Printing in Riyadh",
-      description: "School and university branding in Riyadh, Saudi Arabia: campus signs and wayfinding, graduation stages, certificates, uniforms, sports kits and printing.",
+      description: "School & university signage and printing in Riyadh, Saudi Arabia: campus signs and wayfinding, graduation stages, certificates, uniforms and sports kits.",
       h1: "Signage, events and printing for schools and universities",
       intro: [
         "A school needs signs on the gate and in the corridors, banners for open days, a stage for graduation, certificates, uniforms, sports kits and a steady stream of printing. We handle all of it, in time for the start of term.",
@@ -97,7 +97,7 @@ export const industries: Industry[] = [
     },
     ar: {
       title: "لوحات ومطبوعات المدارس والجامعات في الرياض",
-      description: "هوية المدارس والجامعات في الرياض: لوحات وإرشاد الحرم، ومسارح التخرج، والشهادات، والزي الموحّد، والأطقم الرياضية، والمطبوعات في أنحاء السعودية.",
+      description: "لوحات ومطبوعات المدارس والجامعات في الرياض: لوحات وإرشاد الحرم، ومسارح التخرج، والشهادات، والزي الموحّد، والأطقم الرياضية، والمطبوعات في أنحاء السعودية.",
       h1: "اللوحات والفعاليات والمطبوعات للمدارس والجامعات",
       intro: [
         "تحتاج المدرسة إلى لوحات على البوابة وفي الممرات، وبنرات للأيام المفتوحة، ومسرح للتخرج، وشهادات، وزي موحّد، وأطقم رياضية، ومطبوعات لا تتوقف. ننفّذها كلها قبل بداية الفصل الدراسي.",
@@ -114,7 +114,7 @@ export const industries: Industry[] = [
     products: ["building-wraps-hoarding-graphics", "unipoles-billboards", "road-parking-signs", "custom-branded-safety-sets", "large-format-banner-printing", "flags-pole-banners", "3d-design-visuals", "acp-cladding-facades", "stainless-steel-signage", "booklet-catalogue-printing", "kiosks", "vehicle-wrapping-fleet-branding"],
     en: {
       title: "Real Estate & Construction Site Branding in Riyadh",
-      description: "Real estate and construction branding in Riyadh, Saudi Arabia: site hoardings, project billboards, safety signs and sets, sales-centre branding and brochures.",
+      description: "Real estate & construction site branding in Riyadh, Saudi Arabia: site hoardings, project billboards, safety signs and sets, sales centres and brochures.",
       h1: "Branding for real estate and construction projects",
       intro: [
         "A project is marketed from the day the hoarding goes up. We print and install site hoardings and building wraps, build billboards and unipoles, supply safety signs and branded safety sets for the site, and fit out sales centres with signage, kiosks and brochures.",
@@ -127,7 +127,7 @@ export const industries: Industry[] = [
     },
     ar: {
       title: "هوية المشاريع العقارية ومواقع الإنشاء في الرياض",
-      description: "هوية المشاريع العقارية والإنشائية في الرياض: أسوار المواقع ولوحات المشاريع واليونيبول ولوحات وأطقم السلامة وتجهيز مراكز البيع والبروشورات في السعودية.",
+      description: "هوية المشاريع العقارية ومواقع الإنشاء في الرياض: أسوار المواقع ولوحات المشاريع واليونيبول ولوحات وأطقم السلامة وتجهيز مراكز البيع والبروشورات في السعودية.",
       h1: "الهوية للمشاريع العقارية والإنشائية",
       intro: [
         "يبدأ تسويق المشروع منذ يوم تركيب السور. نطبع ونركّب أسوار المواقع وتغليف المباني، وننفّذ اللوحات الإعلانية واليونيبول، ونوفّر لوحات السلامة وأطقم السلامة بالهوية للموقع، ونجهّز مراكز البيع باللوحات والأكشاك والبروشورات.",
@@ -174,7 +174,7 @@ export const industries: Industry[] = [
     products: ["3d-led-letter-signage", "light-box-signage", "acp-cladding-facades", "sticker-label-printing", "danglers-pos-displays", "kiosks", "promotion-counters-display-cubes", "poster-stands-posters", "a-frame-signs", "installation-removal", "signage-maintenance", "gift-boxes-packaging"],
     en: {
       title: "Retail Shop & Mall Branding in Riyadh, Saudi Arabia",
-      description: "Retail branding in Riyadh, Saudi Arabia: shop signs and façades, window graphics, in-store displays, mall kiosks and promotions, installation and maintenance.",
+      description: "Retail shop & mall branding in Riyadh, Saudi Arabia: shop signs and façades, window graphics, in-store displays, mall kiosks, installation and maintenance.",
       h1: "Branding for shops and malls",
       intro: [
         "Shoppers decide in seconds whether to walk in. We make the shop sign and façade, window graphics, in-store displays, danglers and shelf talkers, mall kiosks and promotion counters, and we install and maintain them across your branches.",
@@ -187,7 +187,7 @@ export const industries: Industry[] = [
     },
     ar: {
       title: "هوية المحلات والمولات في الرياض | السعودية",
-      description: "هوية المحلات في الرياض: لوحات وواجهات المحلات، وملصقات النوافذ، ومواد العرض داخل المتجر، وأكشاك المولات والعروض، والتركيب والصيانة في أنحاء السعودية.",
+      description: "هوية المحلات والمولات في الرياض: لوحات وواجهات المحلات، وملصقات النوافذ، ومواد العرض داخل المتجر، وأكشاك المولات والعروض، والتركيب والصيانة في أنحاء السعودية.",
       h1: "الهوية للمحلات والمولات",
       intro: [
         "يقرر المتسوّق خلال ثوانٍ إن كان سيدخل. نصنع لوحة المحل والواجهة وملصقات النوافذ ومواد العرض داخل المتجر والدانقلر والشلف توكر وأكشاك المولات وكاونترات العروض، ونركّبها ونصونها في جميع فروعك.",

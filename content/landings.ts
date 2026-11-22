@@ -215,7 +215,7 @@ export const landings: Landing[] = [
     },
     ar: {
       title: "شركة دعاية وإعلان ولوحات وطباعة في الرياض",
-      description: "شركة دعاية وإعلان ولوحات في الرياض: لوحات محلات وحروف بارزة مضيئة ولايت بوكس وطباعة بنرات وتغليف سيارات وأعلام وتغليف مباني مع الإنتاج والتركيب.",
+      description: "شركة دعاية وإعلان ولوحات وطباعة في الرياض: لوحات محلات وحروف بارزة مضيئة ولايت بوكس وطباعة بنرات وتغليف سيارات وأعلام وتغليف مباني مع الإنتاج والتركيب.",
       h1: "دعاية وإعلان ولوحات وطباعة في الرياض",
       intro: [
         "ننتج ونركّب الإعلانات التي تضع علامتك في شوارع الرياض: لوحات واجهات المحلات والحروف البارزة المضيئة، والصناديق المضيئة، والبنرات بالمقاسات الكبيرة، وتغليف المباني وأسوار المشاريع، وتغليف السيارات، والأعلام.",
@@ -252,7 +252,7 @@ export const landings: Landing[] = [
     quoteService: "event",
     en: {
       title: "Awards Ceremony & Awards Night Events Company, Riyadh",
-      description: "Awards ceremony and awards night events in Riyadh: stage and set design, lighting, sound, LED screens, trophies, certificates and branding from one team.",
+      description: "Awards ceremony & awards night events company in Riyadh: stage and set design, lighting, sound, LED screens, trophies, certificates and branding.",
       h1: "Awards ceremonies and awards nights in Riyadh",
       intro: [
         "An awards night has a few moments that matter: the walk to the stage, the winner on the screen and the photo with the trophy. We plan and build everything around those moments for companies, schools and organisations in Riyadh.",
@@ -282,7 +282,7 @@ export const landings: Landing[] = [
     },
     ar: {
       title: "تنظيم حفلات تكريم وتوزيع جوائز في الرياض",
-      description: "تنظيم حفلات التكريم وتوزيع الجوائز في الرياض: تصميم المسرح والإضاءة والصوت وشاشات LED والدروع والشهادات والهوية من فريق واحد بعرض سعر مفصّل.",
+      description: "تنظيم حفلات تكريم وتوزيع جوائز في الرياض: تصميم المسرح والإضاءة والصوت وشاشات LED والدروع والشهادات والهوية من فريق واحد بعرض سعر مفصّل.",
       h1: "تنظيم حفلات التكريم وتوزيع الجوائز في الرياض",
       intro: [
         "لحفل التكريم لحظات قليلة تصنع الفرق: الصعود إلى المسرح، وظهور اسم الفائز على الشاشة، والصورة مع الدرع. نخطط لكل شيء حول هذه اللحظات وننفّذه للشركات والمدارس والجهات في الرياض.",
@@ -319,7 +319,7 @@ export const landings: Landing[] = [
     quoteService: "event",
     en: {
       title: "Gala Dinner Event Company in Riyadh | All Star Productions",
-      description: "Gala dinner events in Riyadh: venue styling, stage, lighting, sound, LED screens, entrance and registration, invitations and table branding from one team.",
+      description: "Gala dinner event company in Riyadh: venue styling, stage, lighting, sound, LED screens, entrance and registration, invitations and table branding.",
       h1: "Gala dinner events in Riyadh",
       intro: [
         "A gala dinner is judged on the room the moment guests walk in. We style and brand the venue, build the stage, and run the lighting, sound and screens for the speeches, presentations and programme you plan, for companies and organisations in Riyadh.",
