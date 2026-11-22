@@ -7,7 +7,7 @@ import { Hero } from "@/components/site/hero"
 import { Pillars } from "@/components/site/pillars"
 import { CtaBand, Faq, Marquee, Pricing, Process, SectionHead } from "@/components/site/sections"
 import { hasLocale } from "@/lib/i18n"
-import { faqJsonLd } from "@/lib/seo"
+import { faqJsonLd, siteUrl } from "@/lib/seo"
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params
@@ -41,6 +41,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           <Catalogue
             t={t.catalogue}
             lang={lang}
+            quoteMessage={t.whatsapp.productMessage}
+            pageBase={`${siteUrl}/${lang}`}
             items={products.map((p) => ({
               slug: p.slug,
               cat: p.cat,

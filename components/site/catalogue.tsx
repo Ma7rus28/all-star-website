@@ -6,6 +6,7 @@ import type { Dict } from "@/content"
 import type { Product } from "@/content/products"
 import { catIcons, ProductVisual } from "@/components/site/product-visual"
 import type { Locale } from "@/lib/i18n"
+import { isSet, site, waHref } from "@/lib/site"
 import { cn } from "@/lib/utils"
 
 export type CatalogueItem = {
@@ -20,10 +21,16 @@ export function Catalogue({
   t,
   lang,
   items: all,
+  quoteMessage,
+  pageBase,
 }: {
   t: Dict["catalogue"]
   lang: Locale
   items: CatalogueItem[]
+  /** Opening of the WhatsApp quote message; the product name and its page link follow. */
+  quoteMessage: string
+  /** Absolute site URL with the language, for the product link in that message. */
+  pageBase: string
 }) {
   const [filter, setFilter] = useState("all")
   const items = all.filter((i) => filter === "all" || i.cat === filter)
@@ -92,13 +99,21 @@ export function Catalogue({
                 >
                   {t.details}
                 </Link>
-                <Link
-                  href={`/${lang}/contact?service=advertising&needs=${encodeURIComponent(item.name)}`}
+                {/* WhatsApp like the product page button: a contact link per product would give Google
+                    about 70 near-identical contact URLs per language to crawl. */}
+                <a
+                  href={
+                    isSet(site.whatsapp)
+                      ? `${waHref(site.whatsapp)}?text=${encodeURIComponent(`${quoteMessage} ${item.name}.\n${pageBase}/products/${item.slug}`)}`
+                      : `/${lang}/contact`
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={`${t.ask}: ${item.name}`}
                   className="inline-flex min-h-11 items-center underline underline-offset-4"
                 >
                   {t.ask}
-                </Link>
+                </a>
               </div>
               </div>
             </li>
