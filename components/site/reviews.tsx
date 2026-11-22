@@ -24,15 +24,14 @@ export function Reviews({ t, lang }: { t: Dict["reviews"]; lang: Locale }) {
         <SectionHead eyebrow={t.eyebrow} title={t.title} sub={t.sub} />
         <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {reviews.map((r, i) => (
-            <li key={r.name}>
+            <li key={r.en.service}>
               <Reveal delay={i * 80} className="flex h-full flex-col rounded-2xl border border-border bg-card p-6">
                 <Stars label={t.stars} />
                 <blockquote className="mt-4 flex-1 text-[0.9375rem]">
                   <p>{lang === "ar" ? `«${r.ar.text}»` : `“${r.en.text}”`}</p>
                 </blockquote>
                 <p className="mt-5 text-sm">
-                  <bdi dir="ltr" className="font-bold">{r.name}</bdi>
-                  <span className="text-muted-foreground"> · {r[lang].service}</span>
+                  <span className="text-muted-foreground">{r[lang].service}</span>
                 </p>
               </Reveal>
             </li>
