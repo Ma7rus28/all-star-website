@@ -64,7 +64,7 @@ export default async function Services({ params }: PageProps<"/[lang]/services">
                       </li>
                     ))}
                   </ul>
-                  <Link href={`/${lang}/contact?service=${quoteParam[id]}`} className="btn btn-gold mt-8">
+                  <Link href={`/${lang}/contact#service=${quoteParam[id]}`} className="btn btn-gold mt-8">
                     {t.pillars.cta} {item.name}
                     <ArrowRight aria-hidden="true" className="size-5 rtl:rotate-180" />
                   </Link>

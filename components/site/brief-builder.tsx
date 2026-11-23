@@ -17,7 +17,7 @@ export function BriefBuilder({ t, lang }: { t: Dict["builder"]; lang: Locale }) 
   const toggle = (need: string) =>
     setPicked((p) => (p.includes(need) ? p.filter((n) => n !== need) : [...p, need]))
 
-  const href = `/${lang}/contact?service=${type}&needs=${encodeURIComponent(picked.join(", "))}`
+  const href = `/${lang}/contact#service=${type}&needs=${encodeURIComponent(picked.join(", "))}`
 
   return (
     <div className="mt-12 grid gap-6 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">

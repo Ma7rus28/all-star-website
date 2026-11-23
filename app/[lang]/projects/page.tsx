@@ -124,7 +124,7 @@ export default async function Projects({ params }: PageProps<"/[lang]/projects">
 
         <div className="rounded-3xl border border-gold/40 bg-gold/8 p-8 text-center md:p-12">
           <h2 className="text-3xl font-extrabold md:text-4xl">{t.cta}</h2>
-          <Link href={`/${lang}/contact?service=event`} className="btn btn-gold mt-6">
+          <Link href={`/${lang}/contact#service=event`} className="btn btn-gold mt-6">
             {t.ctaButton}
             <ArrowRight aria-hidden="true" className="size-5 rtl:rotate-180" />
           </Link>

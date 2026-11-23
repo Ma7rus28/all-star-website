@@ -37,7 +37,6 @@ export const indexablePaths = [
   "/terms",
   "/refund-policy",
   "/cookies",
-  "/data-request",
 ]
 
 const languageLinks = (path: string) => ({

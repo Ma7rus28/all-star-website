@@ -4,7 +4,7 @@ import { legalSlugs, locales, type Locale } from "@/lib/i18n"
 import { contentUpdated, indexablePaths, siteUrl } from "@/lib/seo"
 import { site } from "@/lib/site"
 
-const legalPaths = new Set<string>([...legalSlugs.map((s) => `/${s}`), "/data-request"])
+const legalPaths = new Set<string>(legalSlugs.map((s) => `/${s}`))
 
 // Next.js writes video text into the XML as it is, so an "&" in a title would break the sitemap.
 const xmlText = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")

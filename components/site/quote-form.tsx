@@ -1,8 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import type { Dict } from "@/content"
 import type { Locale } from "@/lib/i18n"
 import { isSet, site, waHref } from "@/lib/site"
@@ -15,9 +14,22 @@ import { describedBy, Field, Honeypot, Notice, selectClass } from "./form-bits"
 type State = "idle" | "sending" | "done" | "failed" | "manual"
 
 export function QuoteForm({ t, lang }: { t: Dict["form"]; lang: Locale }) {
-  const params = useSearchParams()
-  const presetService = params.get("service") ?? ""
-  const needs = (params.get("needs") ?? "").slice(0, 400)
+  // Quote buttons pre-fill the form via `#service=…&needs=…` (a hash is not a separate URL for crawlers,
+  // unlike `?service=`, which made many duplicate contact URLs). Old `?service=` links still work.
+  const serviceRef = useRef<HTMLSelectElement>(null)
+  const messageRef = useRef<HTMLTextAreaElement>(null)
+  useEffect(() => {
+    const read = () => {
+      const p = new URLSearchParams(window.location.hash.slice(1) || window.location.search)
+      const service = p.get("service") ?? ""
+      const needs = (p.get("needs") ?? "").slice(0, 400)
+      if (serviceRef.current && (services as readonly string[]).includes(service)) serviceRef.current.value = service
+      if (messageRef.current && needs && !messageRef.current.value) messageRef.current.value = needs
+    }
+    read()
+    window.addEventListener("hashchange", read)
+    return () => window.removeEventListener("hashchange", read)
+  }, [])
 
   const [state, setState] = useState<State>("idle")
   const [errors, setErrors] = useState<QuoteField[]>([])
@@ -117,7 +129,7 @@ export function QuoteForm({ t, lang }: { t: Dict["form"]; lang: Locale }) {
           <Input id="q-phone" name="phone" type="tel" inputMode="tel" autoComplete="tel" dir="ltr" className="field" />
         </Field>
         <Field id="q-service" label={t.service} required error={err("service")}>
-          <select id="q-service" name="service" required defaultValue={(services as readonly string[]).includes(presetService) ? presetService : ""} aria-invalid={!!err("service")} aria-describedby={describedBy("q-service", undefined, err("service"))} className={selectClass}>
+          <select ref={serviceRef} id="q-service" name="service" required defaultValue="" aria-invalid={!!err("service")} aria-describedby={describedBy("q-service", undefined, err("service"))} className={selectClass}>
             <option value="" disabled>
               {t.choose}
             </option>
@@ -137,7 +149,7 @@ export function QuoteForm({ t, lang }: { t: Dict["form"]; lang: Locale }) {
       </div>
 
       <Field id="q-message" label={t.message} required hint={t.messageHint} error={err("message")}>
-        <Textarea id="q-message" name="message" rows={6} required defaultValue={needs} aria-invalid={!!err("message")} aria-describedby={describedBy("q-message", t.messageHint, err("message"))} className="min-h-36 text-base" />
+        <Textarea ref={messageRef} id="q-message" name="message" rows={6} required aria-invalid={!!err("message")} aria-describedby={describedBy("q-message", t.messageHint, err("message"))} className="min-h-36 text-base" />
       </Field>
 
       <div className="grid gap-4">

@@ -121,7 +121,7 @@ export function Pillars({ t, lang }: { t: Dict["pillars"]; lang: Locale }) {
               ))}
             </ul>
             <Link
-              href={`/${lang}/contact?service=${quoteParam[item.id]}`}
+              href={`/${lang}/contact#service=${quoteParam[item.id]}`}
               className="btn btn-line mt-7"
             >
               {t.cta} {item.name}

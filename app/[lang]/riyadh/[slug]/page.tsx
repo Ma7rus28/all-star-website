@@ -41,7 +41,7 @@ export default async function RiyadhLanding({ params }: PageProps<"/[lang]/riyad
   // Other Riyadh pages in the same service area, linked by their headings.
   const siblings = landings.filter((l) => l.pillar === landing.pillar && l.slug !== slug)
   const url = `${siteUrl}/${lang}/riyadh/${slug}`
-  const quoteHref = `/${lang}/contact?service=${landing.quoteService}`
+  const quoteHref = `/${lang}/contact#service=${landing.quoteService}`
 
   const jsonLd = [
     {

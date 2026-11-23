@@ -10,7 +10,8 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/data-reque
   const { lang } = await params
   if (!hasLocale(lang)) return {}
   const t = getDict(lang).dataRequest
-  return pageMeta(lang, "/data-request", t.title, t.sub)
+  // A privacy request form: useful from the footer and privacy notice, not as a search result.
+  return { ...pageMeta(lang, "/data-request", t.title, t.sub), robots: { index: false, follow: true } }
 }
 
 export default async function DataRequest({ params }: PageProps<"/[lang]/data-request">) {

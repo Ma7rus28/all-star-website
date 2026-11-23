@@ -48,7 +48,7 @@ export default async function ProductPage({ params }: PageProps<"/[lang]/product
   // the contact form stays the fallback if no WhatsApp number is set.
   const quoteHref = isSet(site.whatsapp)
     ? `${waHref(site.whatsapp)}?text=${encodeURIComponent(`${t.whatsapp.productMessage} ${c.name}.\n${url}`)}`
-    : `/${lang}/contact?service=advertising&needs=${encodeURIComponent(c.name)}`
+    : `/${lang}/contact#service=advertising&needs=${encodeURIComponent(c.name)}`
 
   const jsonLd = [
     {
