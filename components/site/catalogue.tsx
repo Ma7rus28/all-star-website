@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import type { Dict } from "@/content"
 import type { Product } from "@/content/products"
 import { catIcons, ProductVisual } from "@/components/site/product-visual"
@@ -33,6 +33,27 @@ export function Catalogue({
   pageBase: string
 }) {
   const [filter, setFilter] = useState("all")
+
+  // The header's Catalogue dropdown links to `#catalogue-<filter id>`: select that filter and scroll here.
+  // "instant" overrides the site's CSS smooth scrolling, which images loading above can cut short.
+  useEffect(() => {
+    const go = () => document.getElementById("catalogue")?.scrollIntoView({ behavior: "instant" })
+    const apply = (initial: boolean) => {
+      const m = window.location.hash.match(/^#catalogue-([a-z]+)$/)
+      if (!m || !t.filters.some((f) => f.id === m[1])) return
+      setFilter(m[1])
+      if (!initial) return go()
+      // Coming from another page: the router and images move the page after hydration, so jump again as it settles.
+      const timers = [100, 500, 1200].map((ms) => setTimeout(go, ms))
+      const cancel = () => timers.forEach(clearTimeout)
+      window.addEventListener("wheel", cancel, { once: true, passive: true })
+      window.addEventListener("touchstart", cancel, { once: true, passive: true })
+    }
+    apply(true)
+    const onHash = () => apply(false)
+    window.addEventListener("hashchange", onHash)
+    return () => window.removeEventListener("hashchange", onHash)
+  }, [t.filters])
   const items = all.filter((i) => filter === "all" || i.cat === filter)
   const labelOf = (cat: string) => t.filters.find((f) => f.id === cat)?.label ?? cat
 

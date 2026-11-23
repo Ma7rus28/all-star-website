@@ -12,15 +12,20 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { refireIfSameHash } from "./catalogue-menu"
 
 export function MobileNav({
   lang,
   t,
   links,
+  catalogueHref,
+  catLinks,
 }: {
   lang: Locale
   t: Dict["nav"]
   links: { href: string; label: string }[]
+  catalogueHref: string
+  catLinks: { href: string; label: string }[]
 }) {
   const [open, setOpen] = useState(false)
 
@@ -62,6 +67,24 @@ export function MobileNav({
                 >
                   {l.label}
                 </Link>
+                {l.href === catalogueHref && (
+                  <ul className="grid border-b border-border py-2 ps-4">
+                    {catLinks.map((c) => (
+                      <li key={c.href}>
+                        <a
+                          href={c.href}
+                          onClick={() => {
+                            setOpen(false)
+                            refireIfSameHash(c.href)
+                          }}
+                          className="flex min-h-11 items-center text-lg font-medium text-muted-foreground hover:text-gold"
+                        >
+                          {c.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

@@ -79,7 +79,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
           {dict.nav.skip}
         </a>
         <Providers dir={dir}>
-          <Header lang={lang} t={dict.nav} search={dict.search} searchIndex={buildSearchIndex(lang)} />
+          <Header lang={lang} t={dict.nav} search={dict.search} searchIndex={buildSearchIndex(lang)} cats={dict.catalogue.filters} />
           <main id="main" tabIndex={-1} className="flex-1 outline-none">
             {children}
           </main>

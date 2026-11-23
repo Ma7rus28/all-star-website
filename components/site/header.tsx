@@ -6,6 +6,7 @@ import { SparkMark, Wordmark } from "./illustrations"
 import { LangSwitch } from "./lang-switch"
 import { MobileNav } from "./mobile-nav"
 import { SiteSearch } from "./site-search"
+import { CatalogueMenu, type CatalogueLink } from "./catalogue-menu"
 
 export const navLinks = (lang: Locale, t: Dict["nav"]) => [
   { href: `/${lang}/services`, label: t.services },
@@ -39,13 +40,20 @@ export function Header({
   t,
   search,
   searchIndex,
+  cats,
 }: {
   lang: Locale
   t: Dict["nav"]
+  /** Catalogue filters; each becomes a dropdown item under "Catalogue". */
+  cats: Dict["catalogue"]["filters"]
   search: Dict["search"]
   searchIndex: SearchEntry[]
 }) {
   const links = navLinks(lang, t)
+  const catalogueHref = `/${lang}#catalogue`
+  const catLinks: CatalogueLink[] = cats
+    .filter((c) => c.id !== "all")
+    .map((c) => ({ href: `/${lang}#catalogue-${c.id}`, label: c.label }))
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border bg-ink/75 backdrop-blur-md">
       <div className="wrap flex h-18 items-center justify-between gap-3">
@@ -54,12 +62,16 @@ export function Header({
           <ul className="flex items-center gap-1">
             {links.map((l) => (
               <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="inline-flex min-h-11 items-center rounded-full px-3.5 text-[0.9375rem] font-medium whitespace-nowrap text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
-                >
-                  {l.label}
-                </Link>
+                {l.href === catalogueHref ? (
+                  <CatalogueMenu label={l.label} items={catLinks} />
+                ) : (
+                  <Link
+                    href={l.href}
+                    className="inline-flex min-h-11 items-center rounded-full px-3.5 text-[0.9375rem] font-medium whitespace-nowrap text-muted-foreground transition-colors hover:bg-white/10 hover:text-foreground"
+                  >
+                    {l.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -73,7 +85,7 @@ export function Header({
           >
             {t.quote}
           </Link>
-          <MobileNav lang={lang} t={t} links={links} />
+          <MobileNav lang={lang} t={t} links={links} catalogueHref={catalogueHref} catLinks={catLinks} />
         </div>
       </div>
     </header>
